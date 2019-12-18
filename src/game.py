@@ -68,24 +68,40 @@ time.sleep(10)
 
 initial_friend = input("\n Who do you approach first? ")
 if initial_friend == "1":
-    print("\n You walk towards the brunette girl and tap her shoulder. \n You say, 'Hi! My name is '" + name + ". This is my first day here at Hollywood Arts.")
+    print("\n You walk towards the brunette girl and tap her shoulder. \n You say, 'Hi! My name is " + name + ". This is my first day here at Hollywood Arts.'")
     print("\n The girl smiles and says, 'Hi " + name + "! I'm Tori Vega! I remember my first day at Hollywood Arts vividly! It didn't go so great, to be honest. But I'll help make yours the best one ever!'")
-    tori_friend += 10
-    print("\n Your friendship with Tori has increased by 10 points! It is now at " + str(tori_friend) + " points.")
+    tori_friend += 15
+    print("\n Your friendship with Tori has increased by 15 points! It is now at " + str(tori_friend) + " points.")
 if initial_friend == "2":
-    print("\n You walk towards the boy carrying the keyboard and tap his shoulder. \n You say, 'Hi! My name is '" + name + ". This is my first day here at Hollywood Arts.")
-    print("\n The boy smiles and says, 'Hi " + name + "! I'm Andre! Nice to meet you, and welcome to Hollywood Arts! If you ever need someone to talk to, I will always be here!")
-    andre_friend += 10
-    print("\n Your friendship with Andre has increased by 10 points! It is now at " + str(andre_friend) + " points.")
+    print("\n You walk towards the boy carrying the keyboard and tap his shoulder. \n You say, 'Hi! My name is '" + name + "'. This is my first day here at Hollywood Arts.'")
+    print("\n The boy smiles and says, 'Hi " + name + "! I'm Andre! Nice to meet you, and welcome to Hollywood Arts! If you ever need someone to talk to, I will always be here!'")
+    andre_friend += 15
+    print("\n Your friendship with Andre has increased by 15 points! It is now at " + str(andre_friend) + " points.")
 if initial_friend == "3":
-    print("\n You walk towards the boy with curly hair and tap his shoulder. \n You say, 'Hi! My name is '" + name + ". This is my first day here at Hollywood Arts.")
-    print("\n The boy fumbles with his glasses and nervously says, 'Hi " + name + "! I'm Robbie Shapiro. Nice to meet you! This here is my best friend, Rex.")
+    print("\n You walk towards the boy with curly hair and tap his shoulder. \n You say, 'Hi! My name is " + name + ". This is my first day here at Hollywood Arts.'")
+    print("\n The boy fumbles with his glasses and nervously says, 'Hi " + name + "! I'm Robbie Shapiro. Nice to meet you! This here is my best friend, Rex.'")
     print("\n You hear Rex say,'This has got to be the most awkward thing I have ever seen!' Robbie gasps and covers Rex's mouth.")
     print("\n Robbie says, 'Don't listen to him! Anyway, if you need anything, just let me know!' He quickly scampers off.")    
     robbie_friend += 10
     print("\n Your friendship with Robbie has increased by 10 points! It is now at " + str(robbie_friend) + " points.")
 if initial_friend == "4": 
-    print("\n You walk towards the girl wearing all black and tap her shoulder. \n You say, 'Hi! My name is '" + name + ". This is my first day here at Hollywood Arts.")
+    print("\n You walk towards the girl wearing all black and tap her shoulder. \n You say, 'Hi! My name is " + name + ". This is my first day here at Hollywood Arts.'")
     print("\n The girl looks at you and takes another sip of your coffee. \n She says, 'I don't really care. My name is Jade. Hope to see you around school! Hopefully not.' She then walks away.")
     jade_friend += 5
     print("\n Your friendship with Jade has increased by 5 points! It is now at " + str(jade_friend) + " points.")
+if initial_friend == "5":
+    print("\n You walk towards the red-haired girl and tap her shoulder. \n You say, 'Hi! My name is " + name + ". This is my first day here at Hollywood Arts.'")
+    print("\n The girl smiles and says, 'OMG hi " + name + "! I'm Cat!'")
+    print("\n 'Like the animal?' you ask.")
+    print("\n 'What is that supposed to mean??' she gasps.")
+    print("\n 'Um... nothing!' you say.")
+    print("\n 'Oh, okay!' Cat exclaims. 'Welcome to Hollywood Arts! Do you by any chance... have any bibble on you?'")
+    cat_friend +=10
+    print("\n Your friendship with Cat has increased by 10 points! It is now at " + str(cat_friend) + " points.")
+if initial_friend == "6":
+    print("\n You walk towards the boy with the attractive hair. \n You say, 'Hi! My name is '" + name + "'. This is my first day here at Hollywood Arts.'")
+    print("\n The boy smiles and says, 'Hi " + name + "! I'm Beck! Nice to meet you, and welcome to Hollywood Arts! If you ever need someone to talk to, I will always be here!'")
+    beck_friend += 15
+    print("\n Your friendship with Beck has increased by 15 points! It is now at " + str(beck_friend) + " points.")
+
+time.sleep(10)
