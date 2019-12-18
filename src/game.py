@@ -105,3 +105,38 @@ if initial_friend == "6":
     print("\n Your friendship with Beck has increased by 15 points! It is now at " + str(beck_friend) + " points.")
 
 time.sleep(10)
+
+print("--------------------------------------------------------- \n")
+
+print("Classes will start in an hour. You have time to roam around the school.")
+print("\n You should begin looking for supplies that you will need for the Big Showcase.")
+print("""\n There are five different locations you can go to.
+
+1  Sikowitz's classroom
+
+2  Black box theatre
+
+3  Outside lunch area
+
+4  Hallway
+
+5  Lockers
+
+--------------------------------------------------------- \n""")
+
+time.sleep(10)
+
+location = input("\n Where would you like to go first? ")
+
+print(location)
+
+if location == "1":
+    print("You walk into Sikowitz's classroom.")
+if location == "2":
+    print("You walk into the black block theatre.")
+if location == "3":
+    print("You walk outside to the lunch area.")
+if location == "4":
+    print("You continue walking through the hallway.")
+if location == "5":
+    print("You walk over to the lockers.")
