@@ -7,6 +7,8 @@ robbie_friend = 0
 jade_friend = 0
 cat_friend = 0
 beck_friend = 0
+sinjin_friend = 0
+sikowitz_friend = 0 
 
 inventory = []
 
@@ -132,9 +134,6 @@ print("""\n There are five different locations you can go to.
 time.sleep(10)
 
 location = input("\n Where would you like to go first? ")
-
-print(location)
-
 if location == "1":
     print("You walk into Sikowitz's classroom.")
     print("\n You see a man sitting on a stool drinking from a coconut.")
@@ -142,13 +141,20 @@ if location == "1":
     print("\n 'I'm " + name + ", and I'm new here at Hollywood Arts. Would you by any chance have any supplies that I could use for the Big Showcase this week?'")
     print("\n 'Of course, young duckling! Have this,' he exclaims, setting aside his coconut and stepping off his stool.")
     inventory.append("Microphone", "Speakers", "Coconut")
-    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + "."
+    sikowitz_friend += 10
+    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location == "2":
     print("You walk into the black block theatre.")
+    print("\n You see an awkward boy with curly hair standing by the lights.")
+    print("\n 'Hello. I'm Sinjin,' he says creepily.")
+    print("\n 'Um... hi. I'm " + name + ", and I'm new here at Hollywood Arts. Do you know where any of the supplies are kept, so I can use them for the Big Showcase? ")
+    print("\n 'Of course. Have this,' he says without blinking.")
+    inventory.append("Microphone", "Speakers", "Sinjin's phone number")
+    sinjin_friend += 10
+    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + "."
 if location == "3":
     print("You walk outside to the lunch area.")
 if location == "4":
     print("You continue walking through the hallway.")
 if location == "5":
     print("You walk over to the lockers.")
-
