@@ -8,7 +8,8 @@ jade_friend = 0
 cat_friend = 0
 beck_friend = 0
 sinjin_friend = 0
-sikowitz_friend = 0 
+sikowitz_friend = 0
+trina_friend = 0 
 
 inventory = []
 
@@ -151,10 +152,28 @@ if location == "2":
     print("\n 'Of course. Have this,' he says without blinking.")
     inventory.append("Microphone", "Speakers", "Sinjin's phone number")
     sinjin_friend += 10
-    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + "."
+    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location == "3":
     print("You walk outside to the lunch area.")
+    print("\n You see a brunette girl sitting at one of the tables by the food truck on her phone.")
+    print("\n 'Hi, I'm " + name + ", and I'm new here at Hollywood Arts. Do you have anything to help me with the Big Showcase later this week?")
+    print("\n 'OMG hi!! I'm Trina! THE Trina Vega. Of course I can help!! Only if you come to my show next week. It's ChicagooOOOoooO!' she sings obnoxiously.")
+    inventory.append("Trina's phone number", "Used napkin")
+    trina_friend += 10
+    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location == "4":
     print("You continue walking through the hallway.")
+    if beck_friend == 15:
+        print("\n You recognize Beck from earlier, standing next to his girlfriend. She looks intimidating.")
+        print("\n You call out, 'Hey Beck!'")
+        print("\n He smiles and answers, 'Hey " + name + "! Jade and I were just talking about you, and we would love to help you out at the Big Showcase.'")
+        print("\n 'Wow! Thank you, Beck!' you exclaim. Jade just rolls her eyes.")
+        choice = input("""W
+        
+        1  Flirt with Beck
+        2  Flirt with Jade
+        3  Thank them and walk away
+        
+        --------------------------------------------------------- \n""")
 if location == "5":
     print("You walk over to the lockers.")
