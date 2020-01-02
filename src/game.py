@@ -1,10 +1,14 @@
 import time
+import random
+
 tori_friend = 0
 andre_friend = 0
 robbie_friend = 0
 jade_friend = 0
 cat_friend = 0
 beck_friend = 0
+
+inventory = []
 
 print("\n We are pleased to inform you that you have been accepted into Hollywood Arts High School! \n")
 
@@ -99,7 +103,7 @@ if initial_friend == "5":
     cat_friend +=10
     print("\n Your friendship with Cat has increased by 10 points! It is now at " + str(cat_friend) + " points.")
 if initial_friend == "6":
-    print("\n You walk towards the boy with the attractive hair. \n You say, 'Hi! My name is '" + name + "'. This is my first day here at Hollywood Arts.'")
+    print("\n You walk towards the boy with the attractive hair. \n You say, 'Hi! My name is " + name + "'. This is my first day here at Hollywood Arts.'")
     print("\n The boy smiles and says, 'Hi " + name + "! I'm Beck! Nice to meet you, and welcome to Hollywood Arts! If you ever need someone to talk to, I will always be here!'")
     beck_friend += 15
     print("\n Your friendship with Beck has increased by 15 points! It is now at " + str(beck_friend) + " points.")
@@ -110,6 +114,7 @@ print("--------------------------------------------------------- \n")
 
 print("Classes will start in an hour. You have time to roam around the school.")
 print("\n You should begin looking for supplies that you will need for the Big Showcase.")
+print("\n And most importantly, you should continue making new friends!")
 print("""\n There are five different locations you can go to.
 
 1  Sikowitz's classroom
@@ -132,6 +137,12 @@ print(location)
 
 if location == "1":
     print("You walk into Sikowitz's classroom.")
+    print("\n You see a man sitting on a stool drinking from a coconut.")
+    print("\n 'Hello! I'm Mr. Sikowitz! And you are?' he says after taking another sip.")
+    print("\n 'I'm " + name + ", and I'm new here at Hollywood Arts. Would you by any chance have any supplies that I could use for the Big Showcase this week?'")
+    print("\n 'Of course, young duckling! Have this,' he exclaims, setting aside his coconut and stepping off his stool.")
+    inventory.append("Microphone", "Speakers", "Coconut")
+    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + "."
 if location == "2":
     print("You walk into the black block theatre.")
 if location == "3":
@@ -140,3 +151,4 @@ if location == "4":
     print("You continue walking through the hallway.")
 if location == "5":
     print("You walk over to the lockers.")
+
