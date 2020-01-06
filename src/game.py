@@ -180,26 +180,25 @@ if location == "4":
         3  Thank them and walk away
         
         --------------------------------------------------------- \n""")
-        print(choice)
-            if choice == "1":
-                print("\n Beck is so cute, you can't restrain yourself.")
-                print("\n You say, 'Hey, Beck. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
-                print("\n Jade gasps and angrily stares you down as you walk away.")
-                jade_friend -= 20
-                beck_friend += 10
-                print("\n Your friendship with Beck has increased by 10 points! It is now at " + str(beck_friend) + " points.")
-                print("\n Oh no! Your friendship with Jade has decreased by 20 points! It is now at " + str(jade_friend) + " points.")
-            if choice == "2":
-                print("\n Jade is so pretty cute, you can't restrain yourself.")
-                print("\n You say, 'Hey, Jade. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
-                print("\n Beck looks at you awkwardly. Jade smiles, but quickly hides it from Beck.")
-                jade_friend += 15
-                beck_friend -= 10
-                print("\n Your friendship with Jade has increased by 15 points! It is now at " + str(jade_friend) + " points.")
-                print("\n Oh no! Your friendship with Beck has decreased by 10 points! It is now at " + str(beck_friend) + " points.")
-            if choice == "3":
-                inventory.append("Costumes")
-                print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
+        if choice == "1":
+            print("\n Beck is so cute, you can't restrain yourself.")
+            print("\n You say, 'Hey, Beck. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
+            print("\n Jade gasps and angrily stares you down as you walk away.")
+            jade_friend -= 20
+            beck_friend += 10
+            print("\n Your friendship with Beck has increased by 10 points! It is now at " + str(beck_friend) + " points.")
+            print("\n Oh no! Your friendship with Jade has decreased by 20 points! It is now at " + str(jade_friend) + " points.")
+        if choice == "2":
+            print("\n Jade is so pretty cute, you can't restrain yourself.")
+            print("\n You say, 'Hey, Jade. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
+            print("\n Beck looks at you awkwardly. Jade smiles, but quickly hides it from Beck.")
+            jade_friend += 15
+            beck_friend -= 10
+            print("\n Your friendship with Jade has increased by 15 points! It is now at " + str(jade_friend) + " points.")
+            print("\n Oh no! Your friendship with Beck has decreased by 10 points! It is now at " + str(beck_friend) + " points.")
+        if choice == "3":
+            inventory.append("Costumes")
+            print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
     if jade_friend == 5:
         print("You walk over to the lockers.")
         print("\n You recognize Jade from earlier, standing next to her boyfriend. His hair looks really soft.")
@@ -235,3 +234,55 @@ if location == "4":
             print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 
 if location == "5":
+    print("You walk over to the lockers.")
+    if tori_friend == 15:
+        print("\n You recognize Tori from earlier, standing by her locker.")
+        print("\n You call out, 'Hey Tori!'")
+        print("\n She turns to you, smiles, and says, 'Hey " + name + "! How are you?")
+        print("\n 'I'm good, thanks! Wow, I love your locker!' you exclaim.")
+        print("\n 'Thanks! Have you decorated yours yet? It's a Hollywood Arts tradition!' Tori giggles.")
+        print("\n 'I will soon. See you around, Tori!' you say before turning to leave to class.")
+        print("\n 'Oh, wait! Here, have this. It'll help you for at the Big Showcase,' she says.")
+        inventory.append("Costumes")
+        print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
+    else: 
+        print("\n You see a brunette girl standing by her locker. You remind yourself that you should be making more friends.")
+        print("\n You call out, 'Hello! I'm " + name + "! What's your name?")
+        print("\n She turns to you, smiles, and says, 'Hey " + name + "! I'm Tori. How are you?")
+        print("\n 'I'm good, thanks! Wow, I love your locker!' you exclaim.")
+        print("\n 'Thanks! You must be new. Have you decorated your locker yet? It's a Hollywood Arts tradition!' Tori giggles.")
+        print("\n 'I will soon. See you around, Tori!' you say before turning to leave to class.")
+        print("\n 'Oh, wait! Here, have this. It'll help you for at the Big Showcase,' she says.")
+        inventory.append("Speakers")
+        print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
+
+time.sleep(5)
+
+print("--------------------------------------------------------- \n")
+
+print("You go to your only class of the day: Improvisation. Next thing you know, Monday is over!")
+print("\n Your adventures at Hollywood Arts will continue tomorrow, on Tuesday.")
+
+time.sleep(5)
+
+print("\n ---------------------------------------------------------")
+
+print("\n TUESDAY. Second day at Hollywood Arts. Three more days until the Big Showcase! \n")
+
+print("You walk inside, ready for today's adventures. Who will you befriend? Who will you anger? The drama!!! \n")
+
+time.sleep(5)
+
+print("""\n There are five different locations you can go to.
+
+1  Lockers
+
+2  Janitor's closet
+
+3  Guidance counselor's office
+
+4  Sikowitz's classroom
+
+5  Black box theatre
+
+--------------------------------------------------------- \n""")
