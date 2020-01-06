@@ -29,7 +29,7 @@ print("It is your job to prepare a showstopping performance by the end of this w
 
 time.sleep(5)
 
-print("But to do this, you will need to get all of your materials together before the show. You will need to make friends, make smart choices, and make sure you don't run out of turns! \n")
+print("But to do this, you will need to get all of your materials together before the show. You will need to make friends and make smart choices! \n")
 
 time.sleep(5)
 
@@ -57,17 +57,17 @@ time.sleep(5)
 
 print("""When you walk in, you see six students standing by the lockers.
 
-1  The brunette girl seems friendly and could definitely help you for your Big Showcase, though she seems almost obnoxiously confident about her talents.
+\n 1  The brunette girl seems friendly and could definitely help you for your Big Showcase, though she seems almost obnoxiously confident about her talents.
 
-2  The boy holding the keyboard seems like a gifted musical prodigy, which means he could be of big help, and he looks like he could be a very supportive friend.
+\n 2  The boy holding the keyboard seems like a gifted musical prodigy, which means he could be of big help, and he looks like he could be a very supportive friend.
 
-3  The boy with curly hair seems shy and socially awkward, and he'd holding this puppet that's giving you the creeps.
+\n 3  The boy with curly hair seems shy and socially awkward, and he'd holding this puppet that's giving you the creeps.
 
-4  The girl wearing all black gives off scary vibes. She seems very confident, which could be of help for the Big Showcase.
+\n 4  The girl wearing all black gives off scary vibes. She seems very confident, which could be of help for the Big Showcase.
 
-5  The girl with fluorescent red hair always seems to be smiling, and she has a very eccentric personality. She seems... interesting, to say the least.
+\n 5  The girl with fluorescent red hair always seems to be smiling, and she has a very eccentric personality. She seems... interesting, to say the least.
 
-6  The boy with the very attractive hair seems like a very nice guy, though the scary girl in all black is clinging to him tightly. You make the safe assumption that they are dating.
+\n 6  The boy with the very attractive hair seems like a very nice guy, though the scary girl in all black is clinging to him tightly. You make the safe assumption that they are dating.
 
 --------------------------------------------------------- \n""")
 
@@ -141,7 +141,9 @@ if location == "1":
     print("\n 'Hello! I'm Mr. Sikowitz! And you are?' he says after taking another sip.")
     print("\n 'I'm " + name + ", and I'm new here at Hollywood Arts. Would you by any chance have any supplies that I could use for the Big Showcase this week?'")
     print("\n 'Of course, young duckling! Have this,' he exclaims, setting aside his coconut and stepping off his stool.")
-    inventory.append("Microphone", "Speakers", "Coconut")
+    inventory.append("Microphone")
+    inventory.append("Speakers")
+    inventory.append("Coconut")
     sikowitz_friend += 10
     print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location == "2":
@@ -150,7 +152,9 @@ if location == "2":
     print("\n 'Hello. I'm Sinjin,' he says creepily.")
     print("\n 'Um... hi. I'm " + name + ", and I'm new here at Hollywood Arts. Do you know where any of the supplies are kept, so I can use them for the Big Showcase? ")
     print("\n 'Of course. Have this,' he says without blinking.")
-    inventory.append("Microphone", "Speakers", "Sinjin's phone number")
+    inventory.append("Microphone")
+    inventory.append("Speakers")
+    inventory.append("Sinjin's phone number")
     sinjin_friend += 10
     print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location == "3":
@@ -158,7 +162,8 @@ if location == "3":
     print("\n You see a brunette girl sitting at one of the tables by the food truck on her phone.")
     print("\n 'Hi, I'm " + name + ", and I'm new here at Hollywood Arts. Do you have anything to help me with the Big Showcase later this week?")
     print("\n 'OMG hi!! I'm Trina! THE Trina Vega. Of course I can help!! Only if you come to my show next week. It's ChicagooOOOoooO!' she sings obnoxiously.")
-    inventory.append("Trina's phone number", "Used napkin")
+    inventory.append("Trina's phone number")
+    inventory.append("Used napkin")
     trina_friend += 10
     print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location == "4":
@@ -175,5 +180,58 @@ if location == "4":
         3  Thank them and walk away
         
         --------------------------------------------------------- \n""")
+        print(choice)
+            if choice == "1":
+                print("\n Beck is so cute, you can't restrain yourself.")
+                print("\n You say, 'Hey, Beck. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
+                print("\n Jade gasps and angrily stares you down as you walk away.")
+                jade_friend -= 20
+                beck_friend += 10
+                print("\n Your friendship with Beck has increased by 10 points! It is now at " + str(beck_friend) + " points.")
+                print("\n Oh no! Your friendship with Jade has decreased by 20 points! It is now at " + str(jade_friend) + " points.")
+            if choice == "2":
+                print("\n Jade is so pretty cute, you can't restrain yourself.")
+                print("\n You say, 'Hey, Jade. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
+                print("\n Beck looks at you awkwardly. Jade smiles, but quickly hides it from Beck.")
+                jade_friend += 15
+                beck_friend -= 10
+                print("\n Your friendship with Jade has increased by 15 points! It is now at " + str(jade_friend) + " points.")
+                print("\n Oh no! Your friendship with Beck has decreased by 10 points! It is now at " + str(beck_friend) + " points.")
+            if choice == "3":
+                inventory.append("Costumes")
+                print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
+    if jade_friend == 5:
+        print("You walk over to the lockers.")
+        print("\n You recognize Jade from earlier, standing next to her boyfriend. His hair looks really soft.")
+        print("\n You call out, 'Hey Jade!'")
+        print("\n She turns to you and says, 'Hey " + name + "! Beck and I were just talking about you, and we decided that if you need it, we would be willing to help you for the Big Showcase, I guess.'")
+        print("\n 'Wow! Thank you, Jade!' you exclaim.")
+        print("\n Beck smiles at you and says, 'Of course, " + name + "! Anytime.")
+        choice = input("""W
+        
+        1  Flirt with Beck
+        2  Flirt with Jade
+        3  Thank them and walk away
+        
+        --------------------------------------------------------- \n""")
+        if choice == "1":
+            print("\n Beck is so cute, you can't restrain yourself.")
+            print("\n You say, 'Hey, Beck. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
+            print("\n Jade gasps and angrily stares you down as you walk away.")
+            jade_friend -= 20
+            beck_friend += 10
+            print("\n Your friendship with Beck has increased by 10 points! It is now at " + str(beck_friend) + " points.")
+            print("\n Oh no! Your friendship with Jade has decreased by 20 points! It is now at " + str(jade_friend) + " points.")
+        if choice == "2":
+            print("\n Jade is so pretty cute, you can't restrain yourself.")
+            print("\n You say, 'Hey, Jade. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
+            print("\n Beck looks at you awkwardly. Jade smiles, but quickly hides it from Beck.")
+            jade_friend += 15
+            beck_friend -= 10
+            print("\n Your friendship with Jade has increased by 15 points! It is now at " + str(jade_friend) + " points.")
+            print("\n Oh no! Your friendship with Beck has decreased by 10 points! It is now at " + str(beck_friend) + " points.")
+        if choice == "3":
+            inventory.append("Costumes")
+            print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
+
 if location == "5":
-    print("You walk over to the lockers.")
