@@ -291,6 +291,7 @@ time.sleep(10)
 
 location2 = input("\n Where would you like to go first? ")
 if location2 == "1":
+    print("You walk over to the lockers.")
 if location2 == "2":
     print("You walk into the janitor's closet, out of pure curiousity. Maybe you'll make friends with someone in there. Who knows?")
     print("\n Sure enough, when you open the door, you find someone sitting in the corner munching on something.")
@@ -315,7 +316,7 @@ if location2 == "2":
             print("\n 'I know right!' Cat giggles. You and Cat spend the rest of the morning eating bibble in the janitor's closet.")
             cat_friend += 20
             inventory.append("Bag of bibble")
-            print("\n Your friendship with Cat has increased by 20 points! It is now at " + str(beck_friend) + " points.")
+            print("\n Your friendship with Cat has increased by 20 points! It is now at " + str(cat_friend) + " points.")
             print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
         if bibble == "2":
             print("\n This is too much. Cat is addicted to bibble. You have to help her.")
@@ -325,7 +326,7 @@ if location2 == "2":
             print("\n 'Hey! Give it back!' Cat shouts, on the verge of tears.")
             print("\n Determined to help Cat overcome her addiction, you run out the janitor's closet and throw it into the trash can. It's for her own good.")
             cat_friend -= 5
-            print("\n Oh no! Your friendship with Cat has decreased by 5 points! It is now at " + str(jade_friend) + " points.")
+            print("\n Oh no! Your friendship with Cat has decreased by 5 points! It is now at " + str(cat_friend) + " points.")
         if bibble == "3":
             print("\n You decide that this is too strange for your liking. You leave the janitor's closet.")
     else:
@@ -353,7 +354,7 @@ if location2 == "2":
             print("\n 'I know right!' Cat giggles. You and Cat spend the rest of the morning eating bibble in the janitor's closet.")
             cat_friend += 20
             inventory.append("Bag of bibble")
-            print("\n Your friendship with Cat has increased by 20 points! It is now at " + str(beck_friend) + " points.")
+            print("\n Your friendship with Cat has increased by 20 points! It is now at " + str(cat_friend) + " points.")
             print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
         if bibble == "2":
             print("\n You notice that the entire bag is almost empty. She ate a whole 5 pounds of bibble already!")
@@ -363,7 +364,7 @@ if location2 == "2":
             print("\n 'Hey! Give it back!' Cat shouts, on the verge of tears.")
             print("\n Determined to help Cat overcome her addiction, you run out the janitor's closet and throw it into the trash can. It's for her own good.")
             cat_friend -= 5
-            print("\n Oh no! Your friendship with Cat has decreased by 5 points! It is now at " + str(jade_friend) + " points.")
+            print("\n Oh no! Your friendship with Cat has decreased by 5 points! It is now at " + str(cat_friend) + " points.")
         if bibble == "3":
             print("\n You decide that this is too strange for your liking. You leave the janitor's closet.")
 if location2 == "3":
@@ -444,22 +445,34 @@ if location2 == "5":
         3  Walk out of the theatre
 
         --------------------------------------------------------- \n""")
-        if rex == "1":
-        if rex == "2": 
-        if rex == "3":
     else: 
         print("\n You see a curly-haired boy sitting in the front row with a puppet on his lap. You walk over to him.")
-        print("\n 'Hi, I'm " + name "!' you introduce yourself. The boy turns to face you.")
+        print("\n 'Hi, I'm " + name + "!' you introduce yourself. The boy turns to face you.")
         print("\n 'H-hi... I'm Robbie!' he says.")
         print("\n 'Excuse him, he's socially awkward,' Rex blurts out.")
         print("\n 'Am not!' Robbie gasps.")
         print("\n 'Are too!' Rex blurts back.")
+    if rex == "1":
+        print("\n This is strange. You decide to be brutally honest to Robbie.")
+        print("\n 'Robbie, don't you think it's weird that you have this puppet?' you say.")
+        print("\n Robbie gasps. 'He's not just a puppet, he's my friend!'")
+        print("\n 'I'm no puppet!' Rex adds.")
+        robbie_friend -= 10
+        print("\n Oh no! Your friendship with Robbie has decreased by 10 points! It is now at " + str(robbie_friend) + " points.")
+    if rex == "2":
+        print("You decide to be nice to Robbie... and Rex.")
+        print("'Hi Rex!' you say with a smile.")
+        print("'Hello Robbie's friend! Nice to meet ya,' Rex replies. Robbie smiles back at you.")
+        robbie_friend += 10
+        print("\n Your friendship with Robbie has increased by 10 points! It is now at " + str(robbie_friend) + " points.")
+    if rex == "3":
+        print("\n This is strange. You don't really want to be here right now. You turn around and leave the theatre.")
 
 time.sleep(5)
 
 print("--------------------------------------------------------- \n")
 
-if cat_friend == 
+# if cat_friend == 
 
 time.sleep(5)
 
