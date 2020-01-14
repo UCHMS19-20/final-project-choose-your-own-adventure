@@ -172,13 +172,14 @@ if location == "4":
         print("\n You call out, 'Hey Beck!'")
         print("\n He smiles and answers, 'Hey " + name + "! Jade and I were just talking about you, and we would love to help you out at the Big Showcase.'")
         print("\n 'Wow! Thank you, Beck!' you exclaim. Jade just rolls her eyes.")
-        choice = input("""\n What would you like to do now?
+        print("""\n Three ideas pop into your mind.
         
         1  Flirt with Beck
         2  Flirt with Jade
         3  Thank them and walk away
         
         --------------------------------------------------------- \n""")
+        choice = input("\n What would like to do now?" )
         if choice == "1":
             print("\n Beck is so cute, you can't restrain yourself.")
             print("\n You say, 'Hey, Beck. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
@@ -205,13 +206,14 @@ if location == "4":
         print("\n She turns to you and says, 'Hey " + name + "! Beck and I were just talking about you, and we decided that if you need it, we would be willing to help you for the Big Showcase, I guess.'")
         print("\n 'Wow! Thank you, Jade!' you exclaim.")
         print("\n Beck smiles at you and says, 'Of course, " + name + "! Anytime.")
-        choice = input("""\n What would you like to do now?
+        print("""\n Three ideas pop into your mind.
         
         1  Flirt with Beck
         2  Flirt with Jade
         3  Thank them and walk away
         
         --------------------------------------------------------- \n""")
+        choice = input(" \n What would you like to do now?" )
         if choice == "1":
             print("\n Beck is so cute, you can't restrain yourself.")
             print("\n You say, 'Hey, Beck. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
@@ -296,7 +298,7 @@ if location2 == "1":
         print("\n You recognize her as the girl you met before... Cat!")
         print("\n 'Cat...' you say. She turns around. She grins when she sees you.")
         print("\n 'OMG hi " + name + "! Do you want to try some bibble? It's so good!")
-        bibble = input("""\n What will you do?
+        bibble = input("""\n Three ideas pop into your mind.
 
         1  Take the bibble
 
@@ -305,6 +307,7 @@ if location2 == "1":
         3  Walk out of the janitor's closet
 
         --------------------------------------------------------- \n""")
+        bibble = input("\n What will you do?" )
         if bibble == "1":
             print("\n You decide to try some bibble. If Cat is eating it all the time, it has to be good, right?")
             print("\n 'OMG yay!' she giggles, handing you a handful of bibble.")
@@ -334,7 +337,7 @@ if location2 == "1":
         print("\n 'What is that supposed to mean??' she gasps.")
         print("\n 'Nothing... sorry. I'm " + name + ",' you reply.")
         print("\n 'Anyway... OMG do you want to try some bibble?' Cat asks with a grin.")
-        bibble = input("""\n What will you do?
+        print("""\n Three ideas pop into your mind.
 
         1  Take the bibble
 
@@ -343,6 +346,7 @@ if location2 == "1":
         3  Walk out of the janitor's closet
 
         --------------------------------------------------------- \n""")
+        bibble = input("\n What will you do?" )
         if bibble == "1":
             print("\n You decide to try some bibble.")
             print("\n 'OMG yay!' she giggles, handing you a handful of bibble.")
@@ -433,15 +437,6 @@ if location2 == "4":
         print("\n 'Hey " + name + "! I was just telling Rex here how I was going to go find you and ask how your second day at Hollywood Arts is going!'")
         print("\n 'Nah... you just wanted to get the new kid to be your friend so that you would actually have a friend,' Rex says.")
         print("\n Robbie gasps and covers Rex's mouth. 'Lies...' Robbie mutters.")
-        rex = input("""\n What will you do?
-
-        1  Tell Robbie that you think that him having a puppet is weird
-
-        2  Talk to Rex
-
-        3  Walk out of the theatre
-
-        --------------------------------------------------------- \n""")
     else: 
         print("\n You see a curly-haired boy sitting in the front row with a puppet on his lap. You walk over to him.")
         print("\n 'Hi, I'm " + name + "!' you introduce yourself. The boy turns to face you.")
@@ -449,6 +444,16 @@ if location2 == "4":
         print("\n 'Excuse him, he's socially awkward,' Rex blurts out.")
         print("\n 'Am not!' Robbie gasps.")
         print("\n 'Are too!' Rex blurts back.")
+    print("""\n Three ideas pop into your mind.
+
+    1  Tell Robbie that you think that him having a puppet is weird
+
+    2  Talk to Rex
+
+    3  Walk out of the theatre
+
+    --------------------------------------------------------- \n""")
+    rex = input("\n What will you do?" )
     if rex == "1":
         print("\n This is strange. You decide to be brutally honest to Robbie.")
         print("\n 'Robbie, don't you think it's weird that you have this puppet?' you say.")
@@ -495,7 +500,7 @@ else:
         possible_best_friends.append("Robbie")
     print(possible_best_friends)
     while True:
-        best_friend = input("\n Who would you like to become closer to? Make sure you spell their name correctly; after all, he or she is going to be your new BFF! ").upper()
+        best_friend = input("\n Who would you like to become closer to? Make sure you spell their name correctly; after all, he or she is going to be your new BFF! ")
         if best_friend not in ("Tori", "Andre", "Beck", "Jade", "Cat", "Robbie"):
             print("Silly goose! That person doesn't go to Hollywood Arts! Pick someone else")    
         else:
@@ -630,38 +635,63 @@ if location3 == "3":
         print("\n 'Wow, thank you!' you say. 'How can I ever repay you?'")
         print("\n 'Don't worry about it!' Andre laughs. 'Just have fun and put on a great performance!")
         inventory.append("Andre's sheet music")
+        inventory.append("Instruments")
         andre_friend += 30
         print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
         print("\n Your friendship with Andre has increased by 30 points! It is now at " + str(andre_friend) + " points.")
-    if location3 == "4":
-        print("\n You walk outside to the lunch area.")
-        print("\n You realize that you're hungry and want to get a snack before your next class?")
-        print("""\n Here are the two food items you can buy from the food truck:
+if location3 == "4":
+    print("\n You walk outside to the lunch area.")
+    print("\n You realize that you're hungry and want to get a snack before your next class?")
+    print("""\n Here are the two food items you can buy from the food truck:
 
-        1  Burrito
+    1  Burrito
 
-        2  Salad
+    2  Salad
 
-        --------------------------------------------------------- \n""")
+    --------------------------------------------------------- \n""")
 
-        food = input("\n What would you like to get? ")
-        if food == "1":
-            print("\n You decide to get a burrito. You take a bite from it; it's delicious. You turn to find a table to sit at.")
-        if food == "2":
-            print("\n You decide to get a salad. Keeping it healthy! You take a forkful from it; it's delicious. You turn to find a table to sit at.")
-        print("\n 'Hey " + name + "! How are you?'")
-        print("\n You turn around to see who called your name. You smile when you see that it is " + best_friend + ".")
-        print("\n 'So what do you have next class?' " + best_friend + " asks, sitting down next to you.")
-        print("\n 'Math,' you groan. 'Such a boring class.'")
-        print("\n 'Yikes. Boring! Well, have fun! See you after school!' " + best_friend + "says as you two finish up your lunch.")
+    food = input("\n What would you like to get? ")
+    if food == "1":
+        print("\n You decide to get a burrito. You take a bite from it; it's delicious. You turn to find a table to sit at.")
+    if food == "2":
+        print("\n You decide to get a salad. Keeping it healthy! You take a forkful from it; it's delicious. You turn to find a table to sit at.")
+    print("\n 'Hey " + name + "! How are you?'")
+    print("\n You turn around to see who called your name. You smile when you see that it is " + best_friend + ".")
+    print("\n 'So what do you have next class?' " + best_friend + " asks, sitting down next to you.")
+    print("\n 'Math,' you groan. 'Such a boring class.'")
+    print("\n 'Yikes. Boring! Well, have fun! See you after school!' " + best_friend + "says as you two finish up your lunch.")
 
 time.sleep(5)
 
 print("--------------------------------------------------------- \n")
 
-print("You go to your next class of the day: Math class. Next thing you know, school is over!")
+print("You go to your next class of the day: Math class. The day is almost over!")
+
+print("--------------------------------------------------------- \n")
 
 time.sleep(5)
 
-print("\n ---------------------------------------------------------")
+print("\n As you leave math class, you spot " + best_friend + " in the hallway.")
+print("\n 'Hey " + name + "!' " + best_friend + " calls out.")
+if best_friend == "Cat":
+    print("\n 'Got any bibble?' she asks.")
+    print("\n You laugh. 'You bet!'")
+    print("The two of you walk together into the hallway.")
+else:
+    print("\n 'You ready for Friday's performance? " + best_friend + " asks.")
+    print("\n 'I think so... though I still have to do a full run-through,' you confess.")
+    print("\n The two of you continue walking through the hallway.")
+
+print("""\n There are two different locations you can go to.
+
+1  Guidance counselor's office
+
+2  Sikowitz's classroom
+
+--------------------------------------------------------- \n""")
+location4 = input("\n What will you do?" )
+if location4 == "1":
+    print("\n You walk into the guidance counselor's office.")
+if location4 == "2":
+    print("\n You walk into Sikowitz's classroom.")
 
