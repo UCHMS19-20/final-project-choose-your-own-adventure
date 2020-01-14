@@ -275,15 +275,13 @@ time.sleep(5)
 
 print("""\n There are five different locations you can go to.
 
-1  Lockers
+1  Janitor's closet
 
-2  Janitor's closet
+2  Guidance counselor's office
 
-3  Guidance counselor's office
+3  Sikowitz's classroom
 
-4  Sikowitz's classroom
-
-5  Black box theatre
+4  Black box theatre
 
 --------------------------------------------------------- \n""")
 
@@ -291,8 +289,6 @@ time.sleep(10)
 
 location2 = input("\n Where would you like to go first? ")
 if location2 == "1":
-    print("You walk over to the lockers.")
-if location2 == "2":
     print("You walk into the janitor's closet, out of pure curiousity. Maybe you'll make friends with someone in there. Who knows?")
     print("\n Sure enough, when you open the door, you find someone sitting in the corner munching on something.")
     if cat_friend == 10:
@@ -367,7 +363,7 @@ if location2 == "2":
             print("\n Oh no! Your friendship with Cat has decreased by 5 points! It is now at " + str(cat_friend) + " points.")
         if bibble == "3":
             print("\n You decide that this is too strange for your liking. You leave the janitor's closet.")
-if location2 == "3":
+if location2 == "2":
     print("\n You walk into the guidance counselor's office.")
     print("\n 'Hi, I'm Lane!' the counselor greets you as you walk in. 'And you are " + name + ", correct?'")
     print("\n 'That's me!' you say with a smile. You decided to come to the counselor's office because you were feeling quite overwhelmed with this whole Big Showcase. You sit down and tell him why you're feeling stressed.")
@@ -404,7 +400,7 @@ if location2 == "3":
     print("\n 'Well, I hope this session helped a bit to calm your nerves!' Lane says finally, getting up from his seat.")
     print("\n You definitely feel a lot better now. You got this! As long as you have your friends by your side, your show on Friday will be fantastic! You thank Lane for his time and leave his office.")
     lane_friend += 5
-if location2 == "4":
+if location2 == "3":
     if sikowitz_friend == 0:
         print("You walk into Sikowitz's classroom.")
         print("\n You see a man sitting on a stool drinking from a coconut.")
@@ -428,7 +424,7 @@ if location2 == "4":
         print("\n 'I believe in you! Here, have this. For good luck,' Sikowitz says with a wink.")
         inventory.append("Art supplies")
         inventory.append("A really big coconut")
-if location2 == "5":
+if location2 == "4":
     print("You walk into the black box theatre.")
     if robbie_friend == 10:
         print("\n You recognize Robbie sitting in the front row with Rex on his lap. You walk over to him.")
@@ -472,8 +468,51 @@ time.sleep(5)
 
 print("--------------------------------------------------------- \n")
 
-# if cat_friend == 
+if cat_friend > 19:
+    print("You spend the next half hour in the janitor's closet eating bibble with Cat. You check your watch, and -- oh no! You're late to Sikowitz's class!")
+    print("\n You turn to face Cat. 'We're late for class!' you say, frantically getting your things together. Quickly, you and Cat gather up your bibble and run to Sikowitz's class.")
+    print("\n As you two walk into Sikowitz's classroom, you know something is wrong.")
+    print("\n 'Cat. " + name + ". You two are late! Minus fifteen points for classroom participation today!' Sikowitz shouts as he sets his coconut down.")
+    print("\n You sigh. Second day at Hollywood Arts and you have already gotten yourself into some trouble.")
+    sikowitz_friend -= 30
+    best_friend = "Cat"
+else: 
+    print("It is now your second day here at Hollywood Arts. You have already gotten to know some of the people here. It is now time to decide who you would like to get closer to.")
+    print("\n Here are all the people you like so far.")
+    possible_best_friends = []
+    if tori_friend > 0:
+        inventory.append("Tori")
+    if andre_friend > 0:
+        inventory.append("Andre")
+    if beck_friend > 0:
+        inventory.append("Beck")
+    if jade_friend > 0:
+        inventory.append("Jade")
+    if cat_friend > 0:
+        inventory.append("Cat")
+    if robbie_friend > 0:
+        inventory.append("Robbie")
+    print(possible_best_friends)
+    while True:
+        best_friend = input("\n Who would you like to become closer to? Make sure you spell their name correctly; after all, he or she is going to be your new BFF!")
+        if best_friend.lower() not in ("Tori", "Andre", "Beck", "Jade", "Cat", "Robbie"):
+            print("Silly goose! That person doesn't go to Hollywood Arts! Pick someone else")    
+        else:
+            break
+        
+time.sleep(5)
+
+print("--------------------------------------------------------- \n")
+
+print("You go to your next class of the day: Ballet dance. Next thing you know, Tuesday is over!")
+print("\n Your adventures at Hollywood Arts will continue tomorrow, on Wednesday.")
 
 time.sleep(5)
 
 print("\n ---------------------------------------------------------")
+
+print("\n WEDNESDAY. Third day at Hollywood Arts. Two more days until the Big Showcase! \n")
+
+print("What exciting things will happen today at school? Are you ready for Friday's performance? Do you have what it takes? \n")
+
+time.sleep(5)
