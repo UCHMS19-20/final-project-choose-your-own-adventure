@@ -253,6 +253,7 @@ if location == "5":
         print("\n 'Thanks! You must be new. Have you decorated your locker yet? It's a Hollywood Arts tradition!' Tori giggles.")
         print("\n 'I will soon. See you around, Tori!' you say before turning to leave to class.")
         print("\n 'Oh, wait! Here, have this. It'll help you for at the Big Showcase,' she says.")
+        tori_friend += 3
         inventory.append("Speakers")
         print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 
@@ -273,7 +274,7 @@ print("You walk inside, ready for today's adventures. Who will you befriend? Who
 
 time.sleep(5)
 
-print("""\n There are five different locations you can go to.
+print("""\n There are four different locations you can go to.
 
 1  Janitor's closet
 
@@ -374,7 +375,7 @@ if location2 == "2":
         print("\n 'I met Tori, and she seems like such a nice person! I'm really glad that I met her,' you say.")
         print("\n 'Good. She's a good friend. And she'll definitely help you at the Big Showcase,' Lane responds.")
     if andre_friend > 0:
-        print("\n 'I met Andre, and he seems like such a nice friend! I'm really glad that met him,' you say.")
+        print("\n 'I met Andre, and he seems like such a nice friend! I'm really glad that I met him,' you say.")
         print("\n 'Good. He's a good person. And very talented, too. And he'll definitely help you at the Big Showcase,' Lane responds.")
     if robbie_friend > 0:
         print("\n 'I met Robbie, and he seems cool. Though he always seems to have that puppet on him...' you say.")
@@ -481,21 +482,21 @@ else:
     print("\n Here are all the people you like so far.")
     possible_best_friends = []
     if tori_friend > 0:
-        inventory.append("Tori")
+        possible_best_friends.append("Tori")
     if andre_friend > 0:
-        inventory.append("Andre")
+        possible_best_friends.append("Andre")
     if beck_friend > 0:
-        inventory.append("Beck")
+        possible_best_friends.append("Beck")
     if jade_friend > 0:
-        inventory.append("Jade")
+        possible_best_friends.append("Jade")
     if cat_friend > 0:
-        inventory.append("Cat")
+        possible_best_friends.append("Cat")
     if robbie_friend > 0:
-        inventory.append("Robbie")
+        possible_best_friends.append("Robbie")
     print(possible_best_friends)
     while True:
-        best_friend = input("\n Who would you like to become closer to? Make sure you spell their name correctly; after all, he or she is going to be your new BFF!")
-        if best_friend.lower() not in ("Tori", "Andre", "Beck", "Jade", "Cat", "Robbie"):
+        best_friend = input("\n Who would you like to become closer to? Make sure you spell their name correctly; after all, he or she is going to be your new BFF!").lower()
+        if best_friend not in ("tori", "andre", "beck", "jade", "cat", "robbie"):
             print("Silly goose! That person doesn't go to Hollywood Arts! Pick someone else")    
         else:
             break
@@ -516,3 +517,98 @@ print("\n WEDNESDAY. Third day at Hollywood Arts. Two more days until the Big Sh
 print("What exciting things will happen today at school? Are you ready for Friday's performance? Do you have what it takes? \n")
 
 time.sleep(5)
+
+print("""\n There are four different locations you can go to.
+
+1  Sikowitz's classroom
+
+2  Guidance counselor's office
+
+3  Black box theatre
+
+4  Outdoor eating area
+
+--------------------------------------------------------- \n""")
+
+location3 = input("\n Where would you like to go first? ")
+if location3 == "1":
+    print("\n You walk into Sikowitz's classroom")
+    if sikowitz_friend < 0:
+        print("\n Sikowitz turns to face you, and he puts his coconut down. '"+ name + ". I've been meaning to speak to you.'")
+        print("\n This is probably about the incident with Cat. You gained a very close friend from the experience, and a bag of bibble, but at what cost?")
+        print("\n 'I'm sorry...' you start to say, but Sikowitz cuts you off.")
+        print("\n 'It's not just about that," + name + ". It's also about your grades. I'm worried about you. You need to step it up, especially if you want a shot at making it big after Hollywood Arts.'")
+        print("\n 'I understand,' you reply.")
+        print("\n 'I want you practicing for your Big Showcase, which is in two days! No more cadoodling. Got it?' Sikowitz asks.")
+        print("\n You nod. You thank Sikowitz for his time and turn to leave. Time to turn your life around!")
+    else: 
+        print("\n Sikowitz turns to face you and grins when he sees you walk in. '" + name + "! Good to see you! I've been meaning to speak to you!'")
+        print("\n 'About what?' you ask, taking a seat.")
+        print("\n Sikowitz hands you a coconut. 'I wanted to give you the contact information of one of the talent spotters who is going to be here on Friday.'")
+        print("\n 'No way!' you say in-between sips.")
+        print("\n 'Yes way!' Sikowitz laughs, handing you a piece of paper. 'This is his phone number. Please: make a good impression on him this Friday. It's crucial. Have you started preparing?'")
+        print("\n 'A little,' you respond.")
+        print("\n 'Then go, my duckling! Practice! Prepare! I cannot wait to see what you're capable of!' Sikowitz says with a grin.")
+        print("\n You nod, beaming. You thank Sikowitz for his time and turn to leave. Time to make this the best show ever!")
+if location3 == "2":
+    print("\n You walk into the guidance counselor's office.")
+    if lane_friend == "0":
+        print("\n 'Hi, I'm Lane!' the counselor greets you as you walk in. 'And you are " + name + ", correct?'")
+        print("\n 'That's me!' you say with a smile. You decided to come to the counselor's office because you were feeling quite overwhelmed with this whole Big Showcase. You sit down and tell him why you're feeling stressed.")
+        print("\n 'It is perfectly normal to feel nervous about your first big performance at a new school. It's frigtening, I understand. But I need you to take a deep breath and realize that every single student here at Hollywood Arts has gone through the same thing,' Lane explains.")
+        print("\n You smile. He's right. You're not alone.")
+        print("\n 'Have you made some friends yet?' he asks, leaning back in his chair.")
+        if tori_friend > 0:
+            print("\n 'I met Tori, and she seems like such a nice person! I'm really glad that I met her,' you say.")
+            print("\n 'Good. She's a good friend. And she'll definitely help you at the Big Showcase,' Lane responds.")
+        if andre_friend > 0:
+            print("\n 'I met Andre, and he seems like such a nice friend! I'm really glad that I met him,' you say.")
+            print("\n 'Good. He's a good person. And very talented, too. And he'll definitely help you at the Big Showcase,' Lane responds.")
+        if robbie_friend > 0:
+            print("\n 'I met Robbie, and he seems cool. Though he always seems to have that puppet on him...' you say.")
+            print("\n 'We're working on it,' Lane says, rubbing his temples. 'But that's good. Robbie's a good friend. He'll definitely help you at the Big Showcase.'")
+        if jade_friend > 0: 
+            print("\n 'I met Jade, and she seems cool. A little scary and standoff-ish, but cool,' you say.")
+            print("\n Lane takes a deep breath. 'She's a tough cookie. Be careful, promise me. But other than that, she'll definitely help you at the Big Showcase.'")
+        if cat_friend > 0:
+            print ("\n 'I met Cat, and she seems fun. Though she's always eating that bibble,' you laugh.")
+            print("\n 'We're working on it,' Lane says, rubbing his temples. 'But that's good. She's extremely talented. She'll help you at the Big Showcase.'")
+        if beck_friend > 0:
+            print("\n 'I met Beck, and he seems like such a nice person! I'm really glad that I met him,' you say.")
+            print("\n 'Good. He's a nice friend to have. Just... be careful of his girlfriend. That's all,' Lane responds.")
+        if sinjin_friend > 0:
+            print("\n 'I met Sinjin... he's...'")
+            print("\n 'Weird, I know,' Lane finishes. 'Despite that, he'll be of great help for the technical behind-the-scenes action for your Big Showcase.'")
+        if sikowitz_friend > 0:
+            print("\n 'I met Sikowitz, and he seems like such a great teacher. Plus, his coconuts taste great, not gonna lie,' you say.")
+            print("\n 'Good, he's a good friend of mine as well,' Lane says with a smile. 'He's a very talented, yet quirky, instructor. He will definitely help you this Friday for your Big Showcase.'")
+        if trina_friend > 0:
+            print("\n 'I met Trina, and she's...'")
+            print("\n 'Nothing like her sister,' Lane sighs. 'Definitely try to see if you can meet some more people at Hollywood Arts. More talented people.'")
+        print("\n 'Well, I hope this session helped a bit to calm your nerves!' Lane says finally, getting up from his seat.")
+        print("\n You definitely feel a lot better now. You got this! As long as you have your friends by your side, your show on Friday will be fantastic! You thank Lane for his time and leave his office.")
+        lane_friend += 5
+    else:
+        print("\n 'Hey Lane,' you say as you walk in.")
+        print("\n 'Hey " + name + "! How are you?'")
+        print("\n 'I'm doing good,' you respond. 'Just a little nervous about this Friday.'")
+        print("\n 'Understandable,' Lane replies. 'Have you gotten a little closer to anyone the past couples of days?")
+        if tori_friend > 15:
+            print("\n 'I've gotten pretty close to Tori. She's so nice and talented... she's honestly such an amazing friend.")
+        if andre_friend > 15:
+            print("\n 'I've gotten pretty close to Andre. He's so nice and friendly... and I know how talented he is. He's such a great friend.'")
+        if beck_friend > 15:
+            print("\n 'I've gotten pretty close to Beck. He's really nice.'")
+        if jade_friend > 15:
+            print("\n 'I've gotten pretty close to Jade. She seems intimidating at first, but she's actually so chill to be around.'")
+        if cat_friend > 15:
+            print("\n 'I've gotten pretty close to Cat. She's so funny and friendly, and plus, she's introduced me to a very delicious snack.'")
+        if robbie_friend > 15: 
+            print("\n 'I've gotten pretty close to Robbie. He's super chill and nice.'")
+        else:
+            print("\n 'To be honest, I haven't really gotten the chance to get close with anyone.'")
+        print("\n 'Great,' Lane replies, nodding as he listens to you. 'I wish you all the luck for Friday's performance. Remember: continue to make friends and make smart choices!'")
+        print("\n You thank Lane for his wise words before heading out.")
+    if location3 == "3":
+        print("\n You walk into the black box theatre.")
+        
