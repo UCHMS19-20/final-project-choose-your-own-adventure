@@ -495,8 +495,8 @@ else:
         possible_best_friends.append("Robbie")
     print(possible_best_friends)
     while True:
-        best_friend = input("\n Who would you like to become closer to? Make sure you spell their name correctly; after all, he or she is going to be your new BFF! ").lower()
-        if best_friend not in ("tori", "andre", "beck", "jade", "cat", "robbie"):
+        best_friend = input("\n Who would you like to become closer to? Make sure you spell their name correctly; after all, he or she is going to be your new BFF! ").upper()
+        if best_friend not in ("Tori", "Andre", "Beck", "Jade", "Cat", "Robbie"):
             print("Silly goose! That person doesn't go to Hollywood Arts! Pick someone else")    
         else:
             print("Congratulations! Your new BFF at Hollywood Arts is " + str(best_friend) + "!")
