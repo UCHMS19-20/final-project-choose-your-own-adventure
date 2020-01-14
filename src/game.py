@@ -551,6 +551,8 @@ if location3 == "1":
         print("\n 'A little,' you respond.")
         print("\n 'Then go, my duckling! Practice! Prepare! I cannot wait to see what you're capable of!' Sikowitz says with a grin.")
         print("\n You nod, beaming. You thank Sikowitz for his time and turn to leave. Time to make this the best show ever!")
+        inventory.append("Talent spotter's phone number")
+        print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location3 == "2":
     print("\n You walk into the guidance counselor's office.")
     if lane_friend == "0":
@@ -610,5 +612,56 @@ if location3 == "2":
             print("\n 'To be honest, I haven't really gotten the chance to get close with anyone.'")
         print("\n 'Great,' Lane replies, nodding as he listens to you. 'I wish you all the luck for Friday's performance. Remember: continue to make friends and make smart choices!'")
         print("\n You thank Lane for his wise words before heading out.")
-    if location3 == "3":
-        print("\n You walk into the black box theatre.")
+if location3 == "3":
+    print("\n You walk into the black box theatre.")
+    if andre_friend == 0:
+        print("\n You see a boy sitting at the far right, strumming on his guitar. You decide to make a new friend.")
+        print("\n 'Hello!' you say with a smile as you approach him. The boy looks up and grins.")
+        print("\n 'Hi, I'm Andre! You're new here, aren't you?' he asks.")
+        print("\n You nod. 'I'm " + name + ". My Big Showcase is this Friday and I'm a little nervous.'")
+    if andre_friend > 0:
+        print("\n You recognize Andre from earlier sitting at the far right, strumming on his guitar.")
+        print("\n 'Hey Andre!' you call out as you approach him.")
+        print("\n 'Hey " + name + "! How it's going?' Andre asks.")
+        print("\n 'To be honst, I'm a little nervous about my Big Showcase this Friday,' you confess.")
+        print("\n 'Don't fret!' Andre assures you. 'Everything will be okay. In fact, have you chosen a song yet for the Big Showcase?'")
+        print("\n You realize that you haven't even chosen a song yet! 'Actually... no,' you say, worried.")
+        print("\n 'Hey! Don't worry about it,' Andre says with a smile. 'I've been working out some chords for some songs. You can also borrow some of my instruments for Friday.'")
+        print("\n 'Wow, thank you!' you say. 'How can I ever repay you?'")
+        print("\n 'Don't worry about it!' Andre laughs. 'Just have fun and put on a great performance!")
+        inventory.append("Andre's sheet music")
+        andre_friend += 30
+        print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
+        print("\n Your friendship with Andre has increased by 30 points! It is now at " + str(andre_friend) + " points.")
+    if location3 == "4":
+        print("\n You walk outside to the lunch area.")
+        print("\n You realize that you're hungry and want to get a snack before your next class?")
+        print("""\n Here are the two food items you can buy from the food truck:
+
+        1  Burrito
+
+        2  Salad
+
+        --------------------------------------------------------- \n""")
+
+        food = input("\n What would you like to get? ")
+        if food == "1":
+            print("\n You decide to get a burrito. You take a bite from it; it's delicious. You turn to find a table to sit at.")
+        if food == "2":
+            print("\n You decide to get a salad. Keeping it healthy! You take a forkful from it; it's delicious. You turn to find a table to sit at.")
+        print("\n 'Hey " + name + "! How are you?'")
+        print("\n You turn around to see who called your name. You smile when you see that it is " + best_friend + ".")
+        print("\n 'So what do you have next class?' " + best_friend + " asks, sitting down next to you.")
+        print("\n 'Math,' you groan. 'Such a boring class.'")
+        print("\n 'Yikes. Boring! Well, have fun! See you after school!' " + best_friend + "says as you two finish up your lunch.")
+
+time.sleep(5)
+
+print("--------------------------------------------------------- \n")
+
+print("You go to your next class of the day: Math class. Next thing you know, school is over!")
+
+time.sleep(5)
+
+print("\n ---------------------------------------------------------")
+
