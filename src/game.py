@@ -179,7 +179,7 @@ if location == "4":
         3  Thank them and walk away
         
         --------------------------------------------------------- \n""")
-        choice = input("\n What would like to do now?" )
+        choice = input("\n What would like to do now? ")
         if choice == "1":
             print("\n Beck is so cute, you can't restrain yourself.")
             print("\n You say, 'Hey, Beck. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
@@ -200,12 +200,11 @@ if location == "4":
             inventory.append("Costumes")
             print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
     if jade_friend == 5:
-        print("You walk over to the lockers.")
         print("\n You recognize Jade from earlier, standing next to her boyfriend. His hair looks really soft.")
         print("\n You call out, 'Hey Jade!'")
         print("\n She turns to you and says, 'Hey " + name + "! Beck and I were just talking about you, and we decided that if you need it, we would be willing to help you for the Big Showcase, I guess.'")
         print("\n 'Wow! Thank you, Jade!' you exclaim.")
-        print("\n Beck smiles at you and says, 'Of course, " + name + "! Anytime.")
+        print("\n Beck smiles at you and says, 'Of course, " + name + "! Anytime.'")
         print("""\n Three ideas pop into your mind.
         
         1  Flirt with Beck
@@ -213,7 +212,7 @@ if location == "4":
         3  Thank them and walk away
         
         --------------------------------------------------------- \n""")
-        choice = input(" \n What would you like to do now?" )
+        choice = input(" \n What would you like to do now? ")
         if choice == "1":
             print("\n Beck is so cute, you can't restrain yourself.")
             print("\n You say, 'Hey, Beck. Your shirt looks really nice today. It really matches your beautiful eyes. Talk to you later!'")
@@ -619,12 +618,12 @@ if location3 == "2":
         print("\n You thank Lane for his wise words before heading out.")
 if location3 == "3":
     print("\n You walk into the black box theatre.")
-    if andre_friend == 0:
+    if andre_friend == "0":
         print("\n You see a boy sitting at the far right, strumming on his guitar. You decide to make a new friend.")
         print("\n 'Hello!' you say with a smile as you approach him. The boy looks up and grins.")
         print("\n 'Hi, I'm Andre! You're new here, aren't you?' he asks.")
         print("\n You nod. 'I'm " + name + ". My Big Showcase is this Friday and I'm a little nervous.'")
-    if andre_friend > 0:
+    else:
         print("\n You recognize Andre from earlier sitting at the far right, strumming on his guitar.")
         print("\n 'Hey Andre!' you call out as you approach him.")
         print("\n 'Hey " + name + "! How it's going?' Andre asks.")
@@ -689,7 +688,7 @@ print("""\n There are two different locations you can go to.
 2  Sikowitz's classroom
 
 --------------------------------------------------------- \n""")
-location4 = input("\n What will you do?" )
+location4 = input("\n What will you do? ")
 if location4 == "1":
     print("\n You walk into the guidance counselor's office.")
 if location4 == "2":
