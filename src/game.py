@@ -534,7 +534,7 @@ print("""\n There are four different locations you can go to.
 
 4  Outdoor eating area
 
---------------------------------------------------------- \n""")
+---------------------------------------------------------\n """)
 
 location3 = input("\n Where would you like to go first? ")
 if location3 == "1":
@@ -547,7 +547,7 @@ if location3 == "1":
         print("\n 'I understand,' you reply.")
         print("\n 'I want you practicing for your Big Showcase, which is in two days! No more cadoodling. Got it?' Sikowitz asks.")
         print("\n You nod. You thank Sikowitz for his time and turn to leave. Time to turn your life around!")
-    else: 
+    if sikowitz_friend == 0 or sikowitz_friend > 0: 
         print("\n Sikowitz turns to face you and grins when he sees you walk in. '" + name + "! Good to see you! I've been meaning to speak to you!'")
         print("\n 'About what?' you ask, taking a seat.")
         print("\n Sikowitz hands you a coconut. 'I wanted to give you the contact information of one of the talent spotters who is going to be here on Friday.'")
@@ -560,7 +560,7 @@ if location3 == "1":
         print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location3 == "2":
     print("\n You walk into the guidance counselor's office.")
-    if lane_friend == "0":
+    if lane_friend == 0:
         print("\n 'Hi, I'm Lane!' the counselor greets you as you walk in. 'And you are " + name + ", correct?'")
         print("\n 'That's me!' you say with a smile. You decided to come to the counselor's office because you were feeling quite overwhelmed with this whole Big Showcase. You sit down and tell him why you're feeling stressed.")
         print("\n 'It is perfectly normal to feel nervous about your first big performance at a new school. It's frigtening, I understand. But I need you to take a deep breath and realize that every single student here at Hollywood Arts has gone through the same thing,' Lane explains.")
@@ -596,7 +596,7 @@ if location3 == "2":
         print("\n 'Well, I hope this session helped a bit to calm your nerves!' Lane says finally, getting up from his seat.")
         print("\n You definitely feel a lot better now. You got this! As long as you have your friends by your side, your show on Friday will be fantastic! You thank Lane for his time and leave his office.")
         lane_friend += 5
-    else:
+    if lane_friend > 0:
         print("\n 'Hey Lane,' you say as you walk in.")
         print("\n 'Hey " + name + "! How are you?'")
         print("\n 'I'm doing good,' you respond. 'Just a little nervous about this Friday.'")
