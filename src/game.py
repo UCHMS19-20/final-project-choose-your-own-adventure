@@ -452,7 +452,7 @@ if location2 == "4":
     3  Walk out of the theatre
 
     --------------------------------------------------------- \n""")
-    rex = input("\n What will you do?" )
+    rex = input("\n What will you do? ")
     if rex == "1":
         print("\n This is strange. You decide to be brutally honest to Robbie.")
         print("\n 'Robbie, don't you think it's weird that you have this puppet?' you say.")
@@ -691,6 +691,35 @@ print("""\n There are two different locations you can go to.
 location4 = input("\n What will you do? ")
 if location4 == "1":
     print("\n You walk into the guidance counselor's office.")
+    if lane_friend == "0":
+        print("\n 'Hello!' the guidance counselor says as you walk in. 'I'm Lane. I don't think we've met yet this year. And you are?'")
+        print("\n 'Hi!' you say. 'I'm " + name + ". This is my third day here. My Big Showcase is coming up this Friday, so I've been looking forward to that!'")
+        print("\n 'Awesome!' Lane says, leaning back in his chair. 'I know that your performance will be phenomenal.'")
+    else:
+        print("\n 'Hey Lane!' you call out as you walk in.")
+        print("\n 'Hey " + name + "! Good to see you back here.")
+    print("\n 'So, have you gotten close with any of your friends?")
+    print("\n 'Yes,' you reply. 'I've gotten really close with " + best_friend + "! We eat lunch together now, and we've been spending some time together.'")
+    if best_friend == "Jade":
+        print("\n 'Jade is... interesting, to say the least. But it's good that you've gotten close with her, and gotten on her good side,' Lane says, putting on some lotion.")
+    if best_friend == "Tori":
+        print("\n 'Tori! Good! She's a nice person,' Lane says, putting on some lotion.")
+    if best_friend == "Cat":
+        print("\n 'Cat! She's... interesting. But it's good that you've gotten close with her,' Lane says, putting on some lotion.")
+    if best_friend == "Andre":
+        print("\n 'Andre! He's a very good friend,' Lane says, putting on some lotion.")
+    if best_friend == "Robbie":
+        print("\n 'Robbie! He's... interesting. But it's good that you've found someone,' Lane says, putting on some lotion.")
+    if best_friend == "Beck":
+        print("\n 'Beck! He's a very chill, nice dude. A good friend to have,' Lane says, putting on some lotion.")
+    if andre_friend > 25:
+        print("\n 'Also, Andre has been of great help. He's helping me so much for Friday's performance,' you add.")
+        print("\n 'That's awesome,' Lane says. 'He is a very talented friend to have.'")
+    print("\n 'Well, thank you for coming in! Again, good luck for Friday!' Lane calls out.")
+    print("\n 'Thank you!' you grin.")
+    print("\n 'Oh! One more thing. Have this. My gift to you,' Lane says.")
+    inventory.append("Lotion from Lane")
+    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location4 == "2":
     print("\n You walk into Sikowitz's classroom.")
 
