@@ -1,6 +1,8 @@
+# Necessary to space out text so it's easier to read
 import time
 import random
 
+# Setting variables for friendship points to 0, will increase or decrease depending on choices
 tori_friend = 0
 andre_friend = 0
 robbie_friend = 0
@@ -12,8 +14,10 @@ sikowitz_friend = 0
 trina_friend = 0 
 lane_friend = 0
 
+# Setting a list for inventory that objects will be added to
 inventory = []
 
+# Introduction
 print("\n We are pleased to inform you that you have been accepted into Hollywood Arts High School! \n")
 
 time.sleep(5)
@@ -38,6 +42,7 @@ print("Before you can begin your adventure in Hollywood Arts, we will need to kn
 
 time.sleep(5)
 
+# Set variable for name, will be called later in the code to address player
 name = input("What is your name? ")
 
 print("\n Hello, " + name + "!")
@@ -72,6 +77,8 @@ print("""When you walk in, you see six students standing by the lockers.
 
 time.sleep(10)
 
+# First choice, different paths depending on inputted number
+# Friendship points go up, an integer is added to the variable for friendship
 initial_friend = input("\n Who do you approach first? ")
 if initial_friend == "1":
     print("\n You walk towards the brunette girl and tap her shoulder. \n You say, 'Hi! My name is " + name + ". This is my first day here at Hollywood Arts.'")
@@ -133,6 +140,9 @@ print("""\n There are five different locations you can go to.
 
 time.sleep(10)
 
+# Another choice, different paths depending on input
+# Added to friendship variable, if applicable
+# Added items to inventory, if applicable
 location = input("\n Where would you like to go first? ")
 if location == "1":
     print("You walk into Sikowitz's classroom.")
@@ -167,6 +177,8 @@ if location == "3":
     print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location == "4":
     print("You continue walking through the hallway.")
+
+    # Depending on if variable for friendship is 0 (means you didn't mean that character) or > 0 (meaning you met that character) affects your interaction
     if beck_friend == 15:
         print("\n You recognize Beck from earlier, standing next to his girlfriend. She looks intimidating.")
         print("\n You call out, 'Hey Beck!'")
@@ -236,6 +248,8 @@ if location == "4":
         print("\n You catch the girl in black making out with the boy with the attractive hair. They seem like such interesting people. You should have spoken with one of them before.")
 if location == "5":
     print("You walk over to the lockers.")
+
+    # Depending on if variable for friendship is 0 (means you didn't mean that character) or > 0 (meaning you met that character) affects your interaction
     if tori_friend == 15:
         print("\n You recognize Tori from earlier, standing by her locker.")
         print("\n You call out, 'Hey Tori!'")
@@ -289,6 +303,7 @@ print("""\n There are four different locations you can go to.
 
 time.sleep(10)
 
+# Another choice, more complex because different pathways depend on whether or not friendship variable = 0 or > 0
 location2 = input("\n Where would you like to go first? ")
 if location2 == "1":
     print("You walk into the janitor's closet, out of pure curiousity. Maybe you'll make friends with someone in there. Who knows?")
@@ -374,6 +389,8 @@ if location2 == "2":
     print("\n 'It is perfectly normal to feel nervous about your first big performance at a new school. It's frigtening, I understand. But I need you to take a deep breath and realize that every single student here at Hollywood Arts has gone through the same thing,' Lane explains.")
     print("\n You smile. He's right. You're not alone.")
     print("\n 'Have you made some friends yet?' he asks, leaning back in his chair.")
+    
+    # Depending on whether friendship variable = 0 or > 0 affects whether text is printed, represents whether or not you met a character in your past choices
     if tori_friend > 0:
         print("\n 'I met Tori, and she seems like such a nice person! I'm really glad that I met her,' you say.")
         print("\n 'Good. She's a good friend. And she'll definitely help you at the Big Showcase,' Lane responds.")
@@ -473,6 +490,8 @@ time.sleep(5)
 
 print("--------------------------------------------------------- \n")
 
+# Depending on friendship variable, other friendship variables increase or decrease
+# New variable introduced for player's best friend, will be called later in game for a more personalized customization
 if cat_friend > 19:
     print("You spend the next half hour in the janitor's closet eating bibble with Cat. You check your watch, and -- oh no! You're late to Sikowitz's class!")
     print("\n You turn to face Cat. 'We're late for class!' you say, frantically getting your things together. Quickly, you and Cat gather up your bibble and run to Sikowitz's class.")
@@ -482,6 +501,8 @@ if cat_friend > 19:
     sikowitz_friend -= 30
     best_friend = "Cat"
 else: 
+
+    # New list created for potential best friends, items will be added to this list only if friendship variable > 0
     print("It is now your second day here at Hollywood Arts. You have already gotten to know some of the people here. It is now time to decide who you would like to get closer to.")
     print("\n Here are all the people you like so far.")
     possible_best_friends = []
@@ -498,6 +519,8 @@ else:
     if robbie_friend > 0:
         possible_best_friends.append("Robbie")
     print(possible_best_friends)
+
+    # Make sure input is valid, must be one of the main characters
     while True:
         best_friend = input("\n Who would you like to become closer to? Make sure you spell their name correctly; after all, he or she is going to be your new BFF! ")
         if best_friend not in ("Tori", "Andre", "Beck", "Jade", "Cat", "Robbie"):
@@ -535,6 +558,7 @@ print("""\n There are four different locations you can go to.
 
 ---------------------------------------------------------\n """)
 
+# Depending on if variable for friendship is 0 (means you didn't mean that character) or > 0 (meaning you met that character) affects your interaction
 location3 = input("\n Where would you like to go first? ")
 if location3 == "1":
     print("\n You walk into Sikowitz's classroom")
@@ -700,6 +724,8 @@ if location4 == "1":
         print("\n 'Hey " + name + "! Good to see you back here.")
     print("\n 'So, have you gotten close with any of your friends?")
     print("\n 'Yes,' you reply. 'I've gotten really close with " + best_friend + "! We eat lunch together now, and we've been spending some time together.'")
+    
+    # Depending on the input for best friend, certain text will be printed
     if best_friend == "Jade":
         print("\n 'Jade is... interesting, to say the least. But it's good that you've gotten close with her, and gotten on her good side,' Lane says, putting on some lotion.")
     if best_friend == "Tori":
