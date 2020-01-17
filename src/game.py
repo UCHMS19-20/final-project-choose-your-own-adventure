@@ -748,4 +748,28 @@ if location4 == "1":
     print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 if location4 == "2":
     print("\n You walk into Sikowitz's classroom.")
-
+    if sikowitz_friend < 0:
+        print("\n 'Hello, " + name + ". I'm heading out for lunch now. I'm sorry, I will not be able to stay to talk, Sikowitz says as he puts his coconut away.")
+        print("\n You sigh as he leaves the room. It seems like you will not be getting much of Sikowitz's help for the Big Showcase.")
+        time.sleep(3)
+        print("\n You step out, and see Cat skipping through the hallway.")
+        print("\n 'Hey Cat!' you call out with a smile.")
+        print("\n 'Hellooo " + name + "! Guess what??' she squeals.")
+        print("\n 'What?' you ask.")
+        print("\n 'I got you some sheet music and instruments and even some backup singers and musicians to help you at the Big Showcase!' she exclaims.")
+        print("\n 'No way!' you laugh. You give Cat a big hug. You may not have received Sikowitz's help, but Cat's got your back!")
+        inventory.append("Cat's Sheet Music")
+        print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
+    else: 
+        print("\n 'Hello " + name + "!!' Sikowitz cheers as you walk in.")
+        print("\n 'Big Showcase is in two days, huh? Have you gotten any sheet music ready?' Sikowitz asks.")
+        if "Andre's Sheet Music" in inventory:
+            print("\n 'Andre wrote me amazing sheet music,' you exclaim.")
+        if "Cat's Sheet Music" in inventory:
+            print("\n 'Cat got me awesome sheet music,' you say with a smile.")
+        else: 
+            print("\n 'Unfortunately, I haven't started,' you say with a sigh.")
+            print("\n Sikowitz sighs. 'You should have spoken with either Andre or Cat. They would have helped a lot.'")
+            print("\n 'But that's okay!' Sikotitz says loudly. 'You have time! But not much...'")
+            print("\n 'Thank you, noted,' you say as you turn to leave.")
+        
