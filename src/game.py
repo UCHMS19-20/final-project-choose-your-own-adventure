@@ -107,7 +107,7 @@ if initial_friend == "3":
     print("\n Your friendship with Robbie has increased by 10 points! It is now at " + str(robbie_friend) + " points.")
 if initial_friend == "4": 
     print("\n You walk towards the girl wearing all black and tap her shoulder. \n You say, 'Hi! My name is " + name + ". This is my first day here at Hollywood Arts.'")
-    print("\n The girl looks at you and takes another sip of your coffee. \n She says, 'I don't really care. My name is Jade. Hope to see you around school! Hopefully not.' She then walks away.")
+    print("\n The girl looks at you and takes another sip of her coffee. \n She says, 'I don't really care. My name is Jade. Hope to see you around school! Hopefully not.' She then walks away.")
     jade_friend += 5
     print("\n Your friendship with Jade has increased by 5 points! It is now at " + str(jade_friend) + " points.")
 if initial_friend == "5":
