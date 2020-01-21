@@ -2,6 +2,9 @@
 import time
 import random
 
+import pygame
+import sys
+
 # Setting variables for friendship points to 0, will increase or decrease depending on choices
 tori_friend = 0
 andre_friend = 0
@@ -14,10 +17,14 @@ sikowitz_friend = 0
 trina_friend = 0 
 lane_friend = 0
 
+# Variable for popularity and preparedness, will affect performance at the end of the game
+popularity = 0
+prepare = 0
+
 # Setting a list for inventory that objects will be added to
 inventory = []
 
-# Introduction
+# Introduction to game
 print("\n We are pleased to inform you that you have been accepted into Hollywood Arts High School! \n")
 
 time.sleep(5)
@@ -51,6 +58,7 @@ print("Congratulations! You have finished registration for Hollywood Arts. See y
 
 time.sleep(5)
 
+# Monday's events and choices
 print("\n ---------------------------------------------------------")
 
 print("\n MONDAY. First day at Hollywood Arts. Four more days until the Big Showcase! \n")
@@ -244,7 +252,7 @@ if location == "4":
         if choice == "3":
             inventory.append("Costumes")
             print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
-    else:
+    if beck_friend == 0 and jade_friend == 0:
         print("\n You catch the girl in black making out with the boy with the attractive hair. They seem like such interesting people. You should have spoken with one of them before.")
 if location == "5":
     print("You walk over to the lockers.")
@@ -259,6 +267,7 @@ if location == "5":
         print("\n 'I will soon. See you around, Tori!' you say before turning to leave to class.")
         print("\n 'Oh, wait! Here, have this. It'll help you for at the Big Showcase,' she says.")
         inventory.append("Costumes")
+        inventory.append("Art supplies")
         print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
     else: 
         print("\n You see a brunette girl standing by her locker. You remind yourself that you should be making more friends.")
@@ -270,6 +279,7 @@ if location == "5":
         print("\n 'Oh, wait! Here, have this. It'll help you for at the Big Showcase,' she says.")
         tori_friend += 3
         inventory.append("Speakers")
+        inventory.append("Art supplies")
         print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
 
 time.sleep(5)
@@ -281,6 +291,7 @@ print("\n Your adventures at Hollywood Arts will continue tomorrow, on Tuesday."
 
 time.sleep(5)
 
+# Tuesday's events and choices
 print("\n ---------------------------------------------------------")
 
 print("\n TUESDAY. Second day at Hollywood Arts. Three more days until the Big Showcase! \n")
@@ -538,6 +549,7 @@ print("\n Your adventures at Hollywood Arts will continue tomorrow, on Wednesday
 
 time.sleep(5)
 
+# Wednesday's events and choices
 print("\n ---------------------------------------------------------")
 
 print("\n WEDNESDAY. Third day at Hollywood Arts. Two more days until the Big Showcase! \n")
@@ -772,4 +784,184 @@ if location4 == "2":
             print("\n Sikowitz sighs. 'You should have spoken with either Andre or Cat. They would have helped a lot.'")
             print("\n 'But that's okay!' Sikotitz says loudly. 'You have time! But not much...'")
             print("\n 'Thank you, noted,' you say as you turn to leave.")
-        
+
+time.sleep(5)
+
+print("--------------------------------------------------------- \n")
+
+print("You go to your last class of the day: Theatrical Makeup. Next thing you know, Wednesday is over!")
+print("\n Your adventures at Hollywood Arts will continue tomorrow, on Thursday.")
+
+time.sleep(5)
+
+# Thursday's events and choices
+print("\n ---------------------------------------------------------")
+
+print("\n THURSDAY. Fourth day at Hollywood Arts. One more day until the Big Showcase! Woohoo! \n")
+
+print("\n Today, you will need to begin practicing for tomorrow's performance! You got this! Continue to make smart choices.")
+
+time.sleep(5)
+
+print("""\n Before class starts, you can do one of two things:
+
+1  Decorate your locker
+
+2  Practice for the Big Showcase
+
+---------------------------------------------------------\n """)
+
+print("\n You know that the smart thing to do here is practice, since your performance is tomorrow. But, you know you can always practice at home. You can gain some popularity if you get your locker decorated!")
+prep = input("\n What would you like to do? ")
+if prep == "1":
+    print("\n You decide to decorate your locker!")
+    if "Art supplies" in inventory:
+        print("\n Good thing you made some friends that past few days! You use the art supplies you have in your inventory to begin decorating the best locker ever!")
+        popularity += 30
+    else:
+        print("\n Unfortunately, you weren't able to ask any friends to borrow some art supplies; you should've been more outgoing and talked to more people! Nevertheless, you begin work on your locker.")
+        popularity += 15
+    print("\n After half an hour goes by, your locker is done!")
+    print("\n Congratulations! Your popularity at Hollywood Arts has increased! It is now at " + str(popularity) + " points.")
+if prep == "2":
+    print("\n You decide to practice your chosen song for the Big Showcase in the black box theatre. You know that an undecorated locker may cost you popularity, but being prepared for tomorrow's performance is worth it!")
+    popularity -= 5
+    prepare += 30
+    print("\n Oh no! Your popularity at Hollywood Arts has decreased! It is now at " + str(popularity) + " points.")
+    print("\n Congratulations! Your preparedness for your performance has increased! It is now at " + str(prepare) + " points.")
+
+print("--------------------------------------------------------- \n")
+
+print("You go to your first class of the day: Scriptwriting. The day is almost over!")
+
+print("--------------------------------------------------------- \n")
+
+time.sleep(5)
+
+print("\n After class, you head outside to eat lunch. You spot " + best_friend + " as you grab a burrito from the food truck.")
+print("\n 'Hey " + name + "!' " + best_friend + " calls out.")
+print("\n You wave and join " + best_friend + " at a table.")
+print("\n 'You ready for your Big Showcase?' " + best_friend + " asks.")
+print("\n You nod. 'Now, all I need is a backup singer!'")
+print("\n 'OMG!' " + best_friend + " squeals. 'I would love to be your backup singer!'")
+if best_friend == "Beck":
+    print("\n 'Are you sure you feel comfortable singing? I know you don't sing often, Beck,' you say.")
+    print("\n 'No, it's fine, I got this!' Beck replies calmly.")
+    print("\n 'Okay then! Thank you, thank you, thank you!' you reply, giving him a hug.")
+if best_friend == "Robbie":
+    print("\n 'Are you sure you feel comfortable singing? I know you don't sing often, Robbie,' you say.")
+    print("\n 'No, it's fine, I got this!' Robbie replies calmly.")
+    print("\n 'Okay then! Thank you, thank you, thank you!' you reply, giving him a hug.")
+if best_friend == "Andre":
+    print("\n 'I can also do some of the piano, if you would like,' Andre adds.")
+    print("\n 'That would be amazing! Thank you, Andre!' you reply, giving him a hug.")
+if best_friend == "Jade":
+    print("\n 'I got the alto parts,' Jade adds.")
+    print("\n 'Awesome! Thank you again, Jade!' you reply, giving her a small hug.")
+if best_friend == "Tori":
+    print("\n 'I remember my Big Showcase like it was just yesterday...' Tori says, gazing off into the distance.")
+    print("\n 'Okay...' you reply. 'Well, the past is in the past! It's my time to shine now!'")
+if best_friend == "Cat":
+    print("\n 'This is going to be fuUUuuUn!' Cat sings.")
+    print("\n 'It sure is!' you laugh, giving her a hug.")
+
+time.sleep(5)
+
+print("--------------------------------------------------------- \n")
+
+print("You go to your last class of the day: Vocal Music. Next thing you know, Thursday is over!")
+print("\n Your adventures at Hollywood Arts will continue tomorrow, on Friday.")
+
+time.sleep(5)
+
+# Friday's events and choices
+print("\n ---------------------------------------------------------")
+
+print("\n FRIDAY. Fifth day at Hollywood Arts. IT'S SHOWTIME! \n")
+
+print("\n Today is the big day! You get a good night's sleep, a hearty breakfast, and a big kiss from your mom before coming to school.")
+
+time.sleep(5)
+
+print("\n Classes goes by in a blur. Next thing you know, it's time for the Big Showcase!")
+
+if lane_friend > 0:
+    print("\n Because you met with Lane during the week, you are feeling calm and prepared.")
+    prepare += 20 
+    print("\n Congratulations! Your preparedness for your performance has increased! It is now at " + str(prepare) + " points.")
+if sikowitz_friend > 0:
+    print("\n Because you met with Sikowitz during the week, you now already have special connections with a few of the talent spotters and agents in the audience.")
+    print("\n You notice a few talent spotters perk up when they hear your name announced.")
+    prepare += 20
+    print("\n Congratulations! Your preparedness for your performance has increased! It is now at " + str(prepare) + " points.")
+if sinjin_friend > 0:
+    print("\n Because you met Sinjin, you now have special lighting for your performance, courtesy of Sinjin, of course.")
+    prepare += 5
+    print("\n Congratulations! Your preparedness for your performance has increased! It is now at " + str(prepare) + " points.")
+
+time.sleep(5)
+
+print("""\n Your name is called next. It's your turn! After a week of preparations, it is now your time to shine!
+
+1  Take a Hint
+
+2  Begging on Your Knees
+
+3  Best Friend's Brother
+
+4  Give it Up
+
+5  Freak the Freak Out
+
+---------------------------------------------------------\n """)
+
+song = input("What song have you been preparing for us? ")
+if song == "1":
+    from pygame import mixer
+    mixer.init()
+    mixer.music.load("take_a_hint.mp3")
+    mixer.music.play
+if song == "2":
+    from pygame import mixer
+    mixer.init()
+    mixer.music.load("knees.mp3")
+    mixer.music.play
+if song == "3":
+    from pygame import mixer
+    mixer.init()
+    mixer.music.load("bfb.mp3")
+    mixer.music.play
+if song == "4":
+    from pygame import mixer
+    mixer.init()
+    mixer.music.load("give_it_up.mp3")
+    mixer.music.play
+if song == "5":
+    from pygame import mixer
+    mixer.init()
+    mixer.music.load("freak.mp3")
+    mixer.music.play
+
+print("\n You sing your heart out! Next thing you know, your performance is over!")
+
+if random.randrange(0,100)<50:
+    print("\n As you leave the stage, a talent agent comes up to you.")
+    print("\n 'Hello " + name + "! Your performance was spectacular. It was so phenomenal that I would like to speak to you regarding a potential music deal.'")
+    time.sleep(2)
+    print("\n Congratulations! You earned yourself a music deal!!! All of your hard work has paid off, " + name + "!")
+else:
+    print("\n Unfortunately, no talent spotters approach you for the rest of the night. Better luck next time.")
+
+time.sleep(5)
+
+print("--------------------------------------------------------- \n")
+
+print("Wow! You survived your first week at Hollywood Arts! We hope you had a great time and made a bunch of amazing friends! See you next week!")
+
+from pygame import mixer
+mixer.init()
+mixer.music.load("take_a_hint.mp3")
+
+time.sleep(20)
+
+sys.exit()
