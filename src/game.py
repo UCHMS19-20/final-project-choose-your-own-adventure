@@ -146,7 +146,7 @@ print("""\n There are five different locations you can go to.
 
 --------------------------------------------------------- \n""")
 
-time.sleep(10)
+time.sleep(5)
 
 # Another choice, different paths depending on input
 # Added to friendship variable, if applicable
