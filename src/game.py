@@ -1,7 +1,10 @@
-# Necessary to space out text so it's easier to read
+# Spaces out portions of the storyline and choices, makes it easier to read
 import time
+
+# Used at the end of the game to calculate probability of winning
 import random
 
+# Used to play music at the end of the game
 import pygame
 
 from pygame import mixer
@@ -21,7 +24,7 @@ sikowitz_friend = 0
 trina_friend = 0 
 lane_friend = 0
 
-# Variable for popularity and preparedness, will affect performance at the end of the game
+# Variable for popularity and preparedness
 popularity = 0
 prepare = 0
 
@@ -190,7 +193,7 @@ if location == "3":
 if location == "4":
     print("You continue walking through the hallway.")
 
-    # Depending on if variable for friendship is 0 (means you didn't mean that character) or > 0 (meaning you met that character) affects your interaction
+    # Depending on if variable for friendship is 0 (means you didn't meet that character) or > 0 (meaning you met that character) affects your interaction
     if beck_friend == 15:
         print("\n You recognize Beck from earlier, standing next to his girlfriend. She looks intimidating.")
         print("\n You call out, 'Hey Beck!'")
@@ -261,7 +264,7 @@ if location == "4":
 if location == "5":
     print("You walk over to the lockers.")
 
-    # Depending on if variable for friendship is 0 (means you didn't mean that character) or > 0 (meaning you met that character) affects your interaction
+    # Depending on if variable for friendship is 0 (means you didn't meet that character) or > 0 (meaning you met that character) affects your interaction
     if tori_friend == 15:
         print("\n You recognize Tori from earlier, standing by her locker.")
         print("\n You call out, 'Hey Tori!'")
@@ -574,7 +577,7 @@ print("""\n There are four different locations you can go to.
 
 ---------------------------------------------------------\n """)
 
-# Depending on if variable for friendship is 0 (means you didn't mean that character) or > 0 (meaning you met that character) affects your interaction
+# Depending on if variable for friendship is 0 (means you didn't meet that character) or > 0 (meaning you met that character) affects your interaction
 location3 = input("\n Where would you like to go first? ")
 if location3 == "1":
     print("\n You walk into Sikowitz's classroom")
@@ -919,6 +922,7 @@ print("""\n Your name is called next. It's your turn! After a week of preparatio
 
 ---------------------------------------------------------\n """)
 
+# Plays song based on player's input
 song = input("What song have you been preparing for us? ")
 if song == "1":
     mixer.music.load("music/take_a_hint.mp3")
@@ -938,6 +942,7 @@ if song == "5":
 
 print("\n You sing your heart out! Next thing you know, your performance is over!")
 
+# Probability of winning the game
 if random.randrange(0,100)<50:
     print("\n As you leave the stage, a talent agent comes up to you.")
     print("\n 'Hello " + name + "! Your performance was spectacular. It was so phenomenal that I would like to speak to you regarding a potential music deal.'")
