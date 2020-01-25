@@ -939,7 +939,7 @@ if song == "4":
 if song == "5":
     from pygame import mixer
     mixer.init()
-    mixer.music.load("music.freak.mp3")
+    mixer.music.load("music/freak.mp3")
     mixer.music.play
 
 print("\n You sing your heart out! Next thing you know, your performance is over!")
