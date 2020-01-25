@@ -1,5 +1,5 @@
 # Choose Your Own Adventure Game
-### Victorious edition
+### + Victorious edition!
 
 Did you used to watch the Nickelodeon show "Victorious" when you were a child? Were you ever jealous that Tori and her friends got to go to such a fun school? Did you ever wonder what it would be like to go to Hollywood Arts for a week?
 
@@ -9,17 +9,19 @@ If so, then you came to the right place! This game will give players the opportu
 
 Almost everyone has played a choose-your-own-adventure game at some point of their lives. Thus, the controls are simple: 
 
-    Each choice in each event is preceded by a number. To make a choice, input only that number. Wait a few seconds for the result to pop up, absorb what has happened as a result, and your day at Hollywood Arts continues!
+    Each choice in each event is preceded by a number. To make a choice, input only that number. 
+    Wait a few seconds for the result to pop up, absorb what has happened as a result, 
+    and your day at Hollywood Arts continues!
 
 ## Citations
 
-The following source was utilized to incorporate music into the game; after all, you are now a student at Hollywood Arts, a prestigious performing arts school!
+The following source was utilized to incorporate music into the game; after all, you are now a student at Hollywood Arts, a renowned performing arts school!
 
 Fincher, Jon. "PyGame: A Primer on Game Programming in Python." Real Python, 16 Sept. 2019, realpython.com/pygame-a-primer/#sound-effects
 
 ## Flowchart
 
-Link to a handy dandy flowchart that outlines the major events in the code:
+Link to a handy-dandy flowchart that outlines the major events in the code:
 
 
 ## Presentation
