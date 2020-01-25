@@ -3,6 +3,10 @@ import time
 import random
 
 import pygame
+
+from pygame import mixer
+pygame.mixer.init()
+
 import sys
 
 # Setting variables for friendship points to 0, will increase or decrease depending on choices
@@ -578,7 +582,7 @@ if location3 == "1":
         print("\n Sikowitz turns to face you, and he puts his coconut down. '"+ name + ". I've been meaning to speak to you.'")
         print("\n This is probably about the incident with Cat. You gained a very close friend from the experience, and a bag of bibble, but at what cost?")
         print("\n 'I'm sorry...' you start to say, but Sikowitz cuts you off.")
-        print("\n 'It's not just about that," + name + ". It's also about your grades. I'm worried about you. You need to step it up, especially if you want a shot at making it big after Hollywood Arts.'")
+        print("\n 'It's not just about that, " + name + ". It's also about your grades. I'm worried about you. You need to step it up, especially if you want a shot at making it big after Hollywood Arts.'")
         print("\n 'I understand,' you reply.")
         print("\n 'I want you practicing for your Big Showcase, which is in two days! No more cadoodling. Got it?' Sikowitz asks.")
         print("\n You nod. You thank Sikowitz for his time and turn to leave. Time to turn your life around!")
@@ -917,30 +921,20 @@ print("""\n Your name is called next. It's your turn! After a week of preparatio
 
 song = input("What song have you been preparing for us? ")
 if song == "1":
-    from pygame import mixer
-    mixer.init()
     mixer.music.load("music/take_a_hint.mp3")
-    mixer.music.play
+    mixer.music.play()
 if song == "2":
-    from pygame import mixer
-    mixer.init()
     mixer.music.load("music/knees.mp3")
-    mixer.music.play
+    mixer.music.play()
 if song == "3":
-    from pygame import mixer
-    mixer.init()
     mixer.music.load("music/bfb.mp3")
-    mixer.music.play
+    mixer.music.play()
 if song == "4":
-    from pygame import mixer
-    mixer.init()
     mixer.music.load("music/give_it_up.mp3")
-    mixer.music.play
+    mixer.music.play()
 if song == "5":
-    from pygame import mixer
-    mixer.init()
     mixer.music.load("music/freak.mp3")
-    mixer.music.play
+    mixer.music.play()
 
 print("\n You sing your heart out! Next thing you know, your performance is over!")
 
@@ -958,10 +952,4 @@ print("--------------------------------------------------------- \n")
 
 print("Wow! You survived your first week at Hollywood Arts! We hope you had a great time and made a bunch of amazing friends! See you next week!")
 
-from pygame import mixer
-mixer.init()
-mixer.music.load("take_a_hint.mp3")
-
-time.sleep(20)
-
-sys.exit()
+time.sleep(60)
