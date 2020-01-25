@@ -332,7 +332,7 @@ if location2 == "1":
         3  Walk out of the janitor's closet
 
         --------------------------------------------------------- \n""")
-        bibble = input("\n What will you do?" )
+        bibble = input("\n What will you do? ")
         if bibble == "1":
             print("\n You decide to try some bibble. If Cat is eating it all the time, it has to be good, right?")
             print("\n 'OMG yay!' she giggles, handing you a handful of bibble.")
@@ -371,7 +371,7 @@ if location2 == "1":
         3  Walk out of the janitor's closet
 
         --------------------------------------------------------- \n""")
-        bibble = input("\n What will you do?" )
+        bibble = input("\n What will you do? ")
         if bibble == "1":
             print("\n You decide to try some bibble.")
             print("\n 'OMG yay!' she giggles, handing you a handful of bibble.")
@@ -919,27 +919,27 @@ song = input("What song have you been preparing for us? ")
 if song == "1":
     from pygame import mixer
     mixer.init()
-    mixer.music.load("take_a_hint.mp3")
+    mixer.music.load("music/take_a_hint.mp3")
     mixer.music.play
 if song == "2":
     from pygame import mixer
     mixer.init()
-    mixer.music.load("knees.mp3")
+    mixer.music.load("music/knees.mp3")
     mixer.music.play
 if song == "3":
     from pygame import mixer
     mixer.init()
-    mixer.music.load("bfb.mp3")
+    mixer.music.load("music/bfb.mp3")
     mixer.music.play
 if song == "4":
     from pygame import mixer
     mixer.init()
-    mixer.music.load("give_it_up.mp3")
+    mixer.music.load("music/give_it_up.mp3")
     mixer.music.play
 if song == "5":
     from pygame import mixer
     mixer.init()
-    mixer.music.load("freak.mp3")
+    mixer.music.load("music.freak.mp3")
     mixer.music.play
 
 print("\n You sing your heart out! Next thing you know, your performance is over!")
