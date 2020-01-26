@@ -31,7 +31,45 @@ prepare = 0
 # Setting a list for inventory that objects will be added to
 inventory = []
 
+
+print("""\n Before we start the game, we must ask: what is your favorite song from Victorious?
+
+1  Take a Hint
+
+2  Begging on Your Knees
+
+3  Best Friend's Brother
+
+4  Give it Up
+
+5  Freak the Freak Out
+
+\n""")
+
+# Plays song based on player's input
+song = input(">>> ")
+if song == "1":
+    mixer.music.load("music/take_a_hint.mp3")
+    mixer.music.play()
+if song == "2":
+    mixer.music.load("music/knees.mp3")
+    mixer.music.play()
+if song == "3":
+    mixer.music.load("music/bfb.mp3")
+    mixer.music.play()
+if song == "4":
+    mixer.music.load("music/give_it_up.mp3")
+    mixer.music.play()
+if song == "5":
+    mixer.music.load("music/freak.mp3")
+    mixer.music.play()
+
+time.sleep(3)
+
 # Introduction to game
+
+print("\n ----------------------------------------------------------------------------------------------------------")
+
 print("\n We are pleased to inform you that you have been accepted into Hollywood Arts High School! \n")
 
 time.sleep(5)
@@ -74,23 +112,35 @@ print("You walk into your new school, nervous. What if you don't make new friend
 
 time.sleep(5)
 
-print("""When you walk in, you see six students standing by the lockers.
+print("When you walk in, you see six students standing by the lockers.")
 
-\n 1  The brunette girl seems friendly and could definitely help you for your Big Showcase, though she seems almost obnoxiously confident about her talents.
+time.sleep(2)
 
-\n 2  The boy holding the keyboard seems like a gifted musical prodigy, which means he could be of big help, and he looks like he could be a very supportive friend.
+print("\n 1  The brunette girl seems friendly and could definitely help you for your Big Showcase, though she seems almost obnoxiously confident about her talents.")
 
-\n 3  The boy with curly hair seems shy and socially awkward, and he's holding this puppet that's giving you the creeps.
+time.sleep(2)
 
-\n 4  The girl wearing all black gives off scary vibes. She seems very confident, which could be of help for the Big Showcase.
+print("\n 2  The boy holding the keyboard seems like a gifted musical prodigy, which means he could be of big help, and he looks like he could be a very supportive friend.")
 
-\n 5  The girl with fluorescent red hair always seems to be smiling, and she has a very eccentric personality. She seems... interesting, to say the least.
+time.sleep(2)
 
-\n 6  The boy with the very attractive hair seems like a very nice guy, though the scary girl in all black is clinging to him tightly. You make the safe assumption that they are dating.
+print("\n 3  The boy with curly hair seems shy and socially awkward, and he's holding this puppet that's giving you the creeps.")
 
---------------------------------------------------------- \n""")
+time.sleep(2)
 
-time.sleep(10)
+print("\n 4  The girl wearing all black gives off scary vibes. She seems very confident, which could be of help for the Big Showcase.")
+
+time.sleep(2)
+
+print("\n 5  The girl with fluorescent red hair always seems to be smiling, and she has a very eccentric personality. She seems... interesting, to say the least.")
+
+time.sleep(2)
+
+print("\n 6  The boy with the very attractive hair seems like a very nice guy, though the scary girl in all black is clinging to him tightly. You make the safe assumption that they are dating.")
+
+print("\n --------------------------------------------------------- \n""")
+
+time.sleep(5)
 
 # First choice, different paths depending on inputted number
 # Friendship points go up, an integer is added to the variable for friendship
@@ -152,8 +202,6 @@ print("""\n There are five different locations you can go to.
 5  Lockers
 
 --------------------------------------------------------- \n""")
-
-time.sleep(5)
 
 # Another choice, different paths depending on input
 # Added to friendship variable, if applicable
@@ -318,8 +366,6 @@ print("""\n There are four different locations you can go to.
 4  Black box theatre
 
 --------------------------------------------------------- \n""")
-
-time.sleep(10)
 
 # Another choice, more complex because different pathways depend on whether or not friendship variable = 0 or > 0
 location2 = input("\n Where would you like to go first? ")
@@ -638,7 +684,7 @@ if location3 == "2":
         print("\n 'Well, I hope this session helped a bit to calm your nerves!' Lane says finally, getting up from his seat.")
         print("\n You definitely feel a lot better now. You got this! As long as you have your friends by your side, your show on Friday will be fantastic! You thank Lane for his time and leave his office.")
         lane_friend += 5
-    if lane_friend > 0:
+    else:
         print("\n 'Hey Lane,' you say as you walk in.")
         print("\n 'Hey " + name + "! How are you?'")
         print("\n 'I'm doing good,' you respond. 'Just a little nervous about this Friday.'")
@@ -661,12 +707,12 @@ if location3 == "2":
         print("\n You thank Lane for his wise words before heading out.")
 if location3 == "3":
     print("\n You walk into the black box theatre.")
-    if andre_friend == "0":
+    if andre_friend == 0:
         print("\n You see a boy sitting at the far right, strumming on his guitar. You decide to make a new friend.")
         print("\n 'Hello!' you say with a smile as you approach him. The boy looks up and grins.")
         print("\n 'Hi, I'm Andre! You're new here, aren't you?' he asks.")
         print("\n You nod. 'I'm " + name + ". My Big Showcase is this Friday and I'm a little nervous.'")
-    else:
+    if andre_friend > 0:
         print("\n You recognize Andre from earlier sitting at the far right, strumming on his guitar.")
         print("\n 'Hey Andre!' you call out as you approach him.")
         print("\n 'Hey " + name + "! How it's going?' Andre asks.")
@@ -905,6 +951,8 @@ if sinjin_friend > 0:
     print("\n Because you met Sinjin, you now have special lighting for your performance, courtesy of Sinjin, of course.")
     prepare += 5
     print("\n Congratulations! Your preparedness for your performance has increased! It is now at " + str(prepare) + " points.")
+
+mixer.music.pause()
 
 time.sleep(5)
 
