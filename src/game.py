@@ -716,17 +716,17 @@ if location3 == "3":
         print("\n You recognize Andre from earlier sitting at the far right, strumming on his guitar.")
         print("\n 'Hey Andre!' you call out as you approach him.")
         print("\n 'Hey " + name + "! How it's going?' Andre asks.")
-        print("\n 'To be honst, I'm a little nervous about my Big Showcase this Friday,' you confess.")
-        print("\n 'Don't fret!' Andre assures you. 'Everything will be okay. In fact, have you chosen a song yet for the Big Showcase?'")
-        print("\n You realize that you haven't even chosen a song yet! 'Actually... no,' you say, worried.")
-        print("\n 'Hey! Don't worry about it,' Andre says with a smile. 'I've been working out some chords for some songs. You can also borrow some of my instruments for Friday.'")
-        print("\n 'Wow, thank you!' you say. 'How can I ever repay you?'")
-        print("\n 'Don't worry about it!' Andre laughs. 'Just have fun and put on a great performance!")
-        inventory.append("Andre's sheet music")
-        inventory.append("Instruments")
-        andre_friend += 30
-        print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
-        print("\n Your friendship with Andre has increased by 30 points! It is now at " + str(andre_friend) + " points.")
+        print("\n 'To be honest, I'm a little nervous about my Big Showcase this Friday,' you confess.")
+    print("\n 'Don't fret!' Andre assures you. 'Everything will be okay. In fact, have you chosen a song yet for the Big Showcase?'")
+    print("\n You realize that you haven't even chosen a song yet! 'Actually... no,' you say, worried.")
+    print("\n 'Hey! Don't worry about it,' Andre says with a smile. 'I've been working out some chords for some songs. You can also borrow some of my instruments for Friday.'")
+    print("\n 'Wow, thank you!' you say. 'How can I ever repay you?'")
+    print("\n 'Don't worry about it!' Andre laughs. 'Just have fun and put on a great performance!")
+    inventory.append("Andre's sheet music")
+    inventory.append("Instruments")
+    andre_friend += 30
+    print("\n Congratulations! You have added to your inventory. You now have: " + str(inventory) + ".")
+    print("\n Your friendship with Andre has increased by 30 points! It is now at " + str(andre_friend) + " points.")
 if location3 == "4":
     print("\n You walk outside to the lunch area.")
     print("\n You realize that you're hungry and want to get a snack before your next class?")
@@ -835,7 +835,7 @@ if location4 == "2":
         else: 
             print("\n 'Unfortunately, I haven't started,' you say with a sigh.")
             print("\n Sikowitz sighs. 'You should have spoken with either Andre or Cat. They would have helped a lot.'")
-            print("\n 'But that's okay!' Sikotitz says loudly. 'You have time! But not much...'")
+            print("\n 'But that's okay!' Sikowitz says loudly. 'You have time! But not much...'")
             print("\n 'Thank you, noted,' you say as you turn to leave.")
 
 time.sleep(5)
