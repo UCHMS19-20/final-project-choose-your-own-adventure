@@ -22,10 +22,10 @@ Fincher, Jon. "PyGame: A Primer on Game Programming in Python." Real Python, 16 
 ## Flowchart
 
 Link to a handy-dandy flowchart that outlines the major events in the code:
-permalink: https://drive.google.com/file/d/1YXyZ_Ko5S8SsOpdmZZ2ahy_hUyJR6tXw/view?usp=sharing
+<http://drive.google.com/file/d/1YXyZ_Ko5S8SsOpdmZZ2ahy_hUyJR6tXw/view?usp=sharing>
 
 
 ## Presentation
 
 Link to Google Slides presentation:
-permalink: https://docs.google.com/presentation/d/1oI3BwRvXgxBMd9MZqCRxRDqtlRBKyvVh4kXYZ2Iq8uM/edit?usp=sharing
+<http://docs.google.com/presentation/d/1oI3BwRvXgxBMd9MZqCRxRDqtlRBKyvVh4kXYZ2Iq8uM/edit?usp=sharing>
